@@ -24,4 +24,9 @@ public class CargoService {
 
         return cargoRepository.save(cargo);
     }
+
+    public Cargo update(Cargo cargo){
+
+        return cargoRepository.save(cargo);
+    }
 }
