@@ -3,6 +3,11 @@ package br.com.aula.CRUDCliente.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 //ANNOTATION LOMBOK
 @Getter
@@ -90,7 +95,7 @@ public class Funcionario {
     @Column(name = "number" )
     private int number;
 
-    @NonNull
+
     @Column(name = "city", nullable = false)
     private String city;
 
@@ -98,12 +103,30 @@ public class Funcionario {
     @Column(name = "complemet")
     private String complemet;
 
-    @NonNull
+
     @Column(name = "uf", nullable = false)
     private String uf;
 
     @Column(name = "cep")
     private String cep;
+
+    public double calcularDecimoTerceiro() throws ParseException {
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = formatador.parse(this.dataIngresso);
+
+
+        Calendar dataIgresso = Calendar.getInstance();
+        Calendar dataAtual = Calendar.getInstance();
+        dataIgresso.setTime(date);
+
+        int meseTrabalhados = +dataAtual.get(Calendar.MONTH)-dataIgresso.get(Calendar.MONTH);
+
+        double calculo = this.cargo.getSalario() / 12;
+        double resultado = calculo * meseTrabalhados;
+
+        return resultado;
+    }
+
 
 
 }

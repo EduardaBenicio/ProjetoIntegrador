@@ -6,6 +6,9 @@ import br.com.aula.CRUDCliente.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 @Service
@@ -13,6 +16,9 @@ public class FuncionarioService {
 
     @Autowired
     FuncionarioRepository funcionarioRepository;
+
+    @Autowired
+    PaymentService paymentService;
 
     //LIST ALL CLIENTS
     public List<Funcionario> findAll(){
@@ -48,5 +54,6 @@ public class FuncionarioService {
 
         return funcionarioRepository.save(cliente);
     }
+
 
 }

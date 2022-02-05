@@ -27,7 +27,7 @@ public class Cargo {
     private String Name;
 
 
-    //@NonNull
+    @NonNull
     @Column(name = "salario")
     private double salario;
 
