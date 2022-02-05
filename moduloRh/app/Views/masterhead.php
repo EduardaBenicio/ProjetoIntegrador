@@ -15,7 +15,7 @@ use App\Controllers\Home;
         <link href="<?=base_url("css/styles.css")?>" rel="stylesheet" />
         <script src="<?=base_url("js/all.min.js")?>" crossorigin="anonymous"></script>
 
-        <link href="<?=base_url("css/bootstrap.min.css")?>" rel="stylesheet" id="bootstrap-css">
+       
         <script src="<?=base_url("js/bootstrap.min.js")?>"></script>
         <script src="<?=base_url("js/jquery-1.11.1.min.js")?>"></script>
     </head>
