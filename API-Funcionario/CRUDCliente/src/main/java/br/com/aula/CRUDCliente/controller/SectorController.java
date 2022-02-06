@@ -1,6 +1,7 @@
 package br.com.aula.CRUDCliente.controller;
 
 
+import br.com.aula.CRUDCliente.model.Funcionario;
 import br.com.aula.CRUDCliente.model.Sector;
 import br.com.aula.CRUDCliente.sevices.SectorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +31,18 @@ public class SectorController {
     public ResponseEntity<Sector> SalvarSector(@RequestBody Sector sector){
 
         return ResponseEntity.status(HttpStatus.CREATED).body(sectorService.save(sector));
+    }
+
+    //FIND BY ID
+    @GetMapping(path = "/{id}")
+    public ResponseEntity<Sector> findSector(@PathVariable Long id){
+
+        Sector sector = sectorService.findById(id);
+
+        if(sector != null){
+            return ResponseEntity.status(HttpStatus.OK).body(sector);
+        }else{
+            return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
     }
 }

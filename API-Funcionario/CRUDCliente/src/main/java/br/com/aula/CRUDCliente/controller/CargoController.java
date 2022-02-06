@@ -2,6 +2,7 @@ package br.com.aula.CRUDCliente.controller;
 
 import br.com.aula.CRUDCliente.model.Cargo;
 
+import br.com.aula.CRUDCliente.model.Sector;
 import br.com.aula.CRUDCliente.sevices.CargoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,5 +29,18 @@ public class CargoController {
     public ResponseEntity<Cargo> SalvarCargo(@RequestBody Cargo cargo){
 
         return ResponseEntity.status(HttpStatus.CREATED).body(cargoService.save(cargo));
+    }
+
+    //FIND BY ID
+    @GetMapping(path = "/{id}")
+    public ResponseEntity<Cargo> findSector(@PathVariable Long id){
+
+        Cargo cargo = cargoService.findById(id);
+
+        if(cargo != null){
+            return ResponseEntity.status(HttpStatus.OK).body(cargo);
+        }else{
+            return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
     }
 }

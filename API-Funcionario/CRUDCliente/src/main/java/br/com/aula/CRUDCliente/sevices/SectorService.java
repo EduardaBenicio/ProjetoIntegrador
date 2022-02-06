@@ -22,4 +22,12 @@ public class SectorService {
 
         return SectorRepository.save(sector);
     }
+
+    public  Sector findById(Long id){
+        if(SectorRepository.findById(id).isPresent()){
+            return SectorRepository.findById(id).get();
+        }else{
+            return null;
+        }
+    }
 }

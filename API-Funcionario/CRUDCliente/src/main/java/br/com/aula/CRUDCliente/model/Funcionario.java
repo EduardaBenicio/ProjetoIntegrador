@@ -110,6 +110,13 @@ public class Funcionario {
     @Column(name = "cep")
     private String cep;
 
+    @Column(name = "estadoCivil")
+    private String estadoCivil;
+
+    @Column(name = "sexo")
+    private String sexo;
+
+
     public double calcularDecimoTerceiro() throws ParseException {
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
         Date date = formatador.parse(this.dataIngresso);
@@ -125,6 +132,35 @@ public class Funcionario {
         double resultado = calculo * meseTrabalhados;
 
         return resultado;
+    }
+
+    public double calcularInss(){
+        double salario = this.cargo.getSalario();
+        double descontoInss = 0;
+        if(salario <= 1212){
+            double v = salario * 7.5;
+            descontoInss = v / 100;
+        }else if(salario <=2427.35){
+            double v = (salario-1212)*9;
+            double v1 = 1212 * 7.5;
+
+            descontoInss = (v+v1)/100;
+        }else if(salario <=3641.03){
+            double v = 1212*7.5;
+            double v1 = (2427.35-1212)*9;
+            double v2 = (salario-2427.35)*12;
+
+            descontoInss = (v+v1+v2)/100;
+        }else if (salario <=7087.22){
+            double v = 1212*7.5;
+            double v1 = (2427.35-1212)*9;
+            double v2 = (7087.22-2427.35)*12;
+            double v3 = (salario-7087.22)*14;
+
+            descontoInss = (v+v1+v2+v3)/100;
+        }
+
+        return descontoInss;
     }
 
 
