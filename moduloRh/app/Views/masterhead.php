@@ -53,7 +53,7 @@ use App\Controllers\Home;
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="<?=site_url("home/index")?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                Painel
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">

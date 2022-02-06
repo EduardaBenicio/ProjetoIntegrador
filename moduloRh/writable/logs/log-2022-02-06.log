@@ -1,0 +1,97 @@
+CRITICAL - 2022-02-06 06:33:25 --> syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF)
+#0 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#2 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(35): view('register-employ...', Array)
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->registerEmployee()
+#4 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-06 06:34:59 --> Undefined index: sector
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-employee.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 276, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(35): view('register-employ...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->registerEmployee()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 06:36:27 --> Array to string conversion
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 279, Array)
+#1 C:\xampp\htdocs\moduloRh\app\Views\register-employee.php(279): printf(Array)
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#5 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(35): view('register-employ...', Array)
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->registerEmployee()
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#8 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-06 06:41:13 --> Array to string conversion
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-employee.php(261): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 261, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(35): view('register-employ...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->registerEmployee()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 06:44:04 --> Array to string conversion
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-employee.php(261): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 261, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(35): view('register-employ...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->registerEmployee()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 06:44:43 --> Array to string conversion
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-employee.php(261): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 261, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(35): view('register-employ...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->registerEmployee()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 07:00:31 --> Use of undefined constant cargo - assumed 'cargo' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarApi()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 07:01:38 --> A non-numeric value encountered
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarApi()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 07:03:51 --> A non-numeric value encountered
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarApi()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 07:51:39 --> Undefined variable: setores
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-employee.php(258): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 258, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(81): view('register-employ...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarApi()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

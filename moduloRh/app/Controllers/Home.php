@@ -61,7 +61,7 @@ class Home extends BaseController
 
     public function registerEmployee()
     {
-        return view('register-employee');
+        return view('employee');
     }
     
 }
