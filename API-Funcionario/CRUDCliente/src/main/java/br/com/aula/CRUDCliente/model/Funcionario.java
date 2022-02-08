@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.concurrent.TimeUnit;
 
 //ANNOTATION LOMBOK
 @Getter
@@ -116,6 +117,8 @@ public class Funcionario {
     @Column(name = "sexo")
     private String sexo;
 
+    @Column(name = "dataUltimoPag")
+    private String dataUltimoPag;
 
     public double calcularDecimoTerceiro() throws ParseException {
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
@@ -126,10 +129,10 @@ public class Funcionario {
         Calendar dataAtual = Calendar.getInstance();
         dataIgresso.setTime(date);
 
-        int meseTrabalhados = +dataAtual.get(Calendar.MONTH)-dataIgresso.get(Calendar.MONTH);
+        int mesesTrabalhados = +dataAtual.get(Calendar.MONTH)-dataIgresso.get(Calendar.MONTH);
 
         double calculo = this.cargo.getSalario() / 12;
-        double resultado = calculo * meseTrabalhados;
+        double resultado = calculo * mesesTrabalhados;
 
         return resultado;
     }
@@ -162,7 +165,42 @@ public class Funcionario {
 
         return descontoInss;
     }
+    public double valorDevido() throws ParseException {
+        double valorDevido = 0;
+        if(this.dataUltimoPag != null){
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            Date firstDate = sdf.parse(this.dataUltimoPag);
+            Date secondDate = new Date();
 
+            long diff = secondDate.getTime() - firstDate.getTime();
+
+            TimeUnit time = TimeUnit.DAYS;
+            long diffrence = time.convert(diff, TimeUnit.MILLISECONDS);
+
+            Calendar datas = new GregorianCalendar();
+            int quantDias = datas.getActualMaximum (Calendar.DAY_OF_MONTH);
+            double val = this.cargo.getSalario()/quantDias;
+
+            valorDevido = val * diffrence;
+        }else{
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            Date firstDate = sdf.parse(this.dataIngresso);
+            Date secondDate = new Date();
+
+            long diff = secondDate.getTime() - firstDate.getTime();
+
+            TimeUnit time = TimeUnit.DAYS;
+            long diffrence = time.convert(diff, TimeUnit.MILLISECONDS);
+
+            Calendar datas = new GregorianCalendar();
+            int quantDias = datas.getActualMaximum (Calendar.DAY_OF_MONTH);
+            double val = this.cargo.getSalario()/quantDias;
+
+            valorDevido = val * diffrence;
+        }
+
+        return valorDevido;
+    }
 
 
 }
