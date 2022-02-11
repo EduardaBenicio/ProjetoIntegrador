@@ -6,6 +6,7 @@ import br.com.aula.CRUDCliente.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -17,8 +18,6 @@ public class FuncionarioService {
     @Autowired
     FuncionarioRepository funcionarioRepository;
 
-    @Autowired
-    PaymentService paymentService;
 
     //LIST ALL CLIENTS
     public List<Funcionario> findAll(){
@@ -29,7 +28,10 @@ public class FuncionarioService {
     //RETURN BY ID
     public Funcionario findById(Long id){
         if(funcionarioRepository.findById(id).isPresent()){
-            return funcionarioRepository.findById(id).get();
+            Funcionario funcionario = funcionarioRepository.findById(id).get();
+            funcionario.valorDevido();
+            update(funcionario);
+            return funcionario;
         }else{
             return null;
         }

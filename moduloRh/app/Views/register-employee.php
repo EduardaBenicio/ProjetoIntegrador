@@ -20,12 +20,13 @@ use App\Controllers\Home;
     <script src="<?= base_url("js/bootstrap.min.js") ?>"></script>
     <script src="<?= base_url("js/jquery-1.11.1.min.js") ?>"></script>
 </head>
-
+<?php if(isset($_SESSION['user']['name'])):?>
+   
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
 
-        <a class="navbar-brand ps-3" href="<?= site_url("home/index") ?>">Setor de RH - Cadastro de Funcionário</a>
+        <a class="navbar-brand ps-3" href="<?= site_url("home/principal") ?>">Setor de RH - Cadastro de Funcionário</a>
 
 
     </nav>
@@ -346,5 +347,5 @@ use App\Controllers\Home;
         </form>
     </div>
 </body>
-
+<?php endif;?>
 </html>

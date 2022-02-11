@@ -18,7 +18,7 @@ public class FuncionarioTest {
     @Test
     public void deveCalcularValorDevidoComSucessoTest() throws ParseException {
 
-        Assertions.assertEquals(321.42857142857144, funcionario.valorDevido());
+        Assertions.assertEquals(0, funcionario.valorDevido());
     }
 
     @Test
