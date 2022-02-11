@@ -1,0 +1,143 @@
+<<<<<<< HEAD
+CRITICAL - 2022-02-10 12:06:24 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\moduloRh\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('CargoController...')
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('CargoController...')
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-10 13:10:31 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\moduloRh\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('CargoController...')
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('CargoController...')
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-10 13:20:26 --> Illegal string offset 'name'
+#0 C:\xampp\htdocs\moduloRh\app\Views\cargos.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 71, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('cargos', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\CargoController.php(44): view('cargos', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->listCargoBySector()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-10 13:21:01 --> Illegal string offset 'id_Sector'
+#0 C:\xampp\htdocs\moduloRh\app\Views\cargos.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 76, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('cargos', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\CargoController.php(44): view('cargos', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->listCargoBySector()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-10 13:22:49 --> Too few arguments to function App\Controllers\CargoController::listCargoBySector(), 0 passed in C:\xampp\htdocs\moduloRh\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->listCargoBySector()
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-10 13:23:12 --> Too few arguments to function App\Controllers\CargoController::listCargoBySector(), 0 passed in C:\xampp\htdocs\moduloRh\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->listCargoBySector()
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-10 13:25:36 --> Too few arguments to function App\Controllers\CargoController::listCargoBySector(), 0 passed in C:\xampp\htdocs\moduloRh\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->listCargoBySector()
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-10 13:26:54 --> Undefined index: id_Sector
+#0 C:\xampp\htdocs\moduloRh\app\Views\cargos.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 76, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('cargos', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\CargoController.php(46): view('cargos', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->listCargoBySector('3')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-10 14:51:21 --> Undefined index: sector
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\CargoController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->salvar()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-10 14:52:15 --> Undefined index: id_Sector
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\CargoController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->salvar()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-10 14:52:45 --> Undefined index: id_Sector
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\CargoController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->salvar()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-10 14:55:32 --> Undefined index: id_Sector
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\CargoController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->salvar()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-10 15:29:43 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\CargoController.php(208): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 208, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\CargoController->deleteCargo('11')
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CargoController))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+=======
+CRITICAL - 2022-02-10 12:01:47 --> Undefined variable: funcionario
+#0 C:\xampp\htdocs\moduloRh\app\Views\payment.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('payment', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Pagamentos.php(19): view('payment', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Pagamentos->index()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pagamentos))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+>>>>>>> f7622ad2f5a310b50db135b75237ce7ac9e9caae
+CRITICAL - 2022-02-10 18:15:55 --> Undefined property: App\Controllers\Home::$session
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Home.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 38, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Home->logar()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-10 18:21:11 --> Illegal string offset 'name'
+#0 C:\xampp\htdocs\moduloRh\app\Views\employee.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('employee', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(19): view('employee', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->index()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-10 18:21:32 --> Illegal string offset 'name'
+#0 C:\xampp\htdocs\moduloRh\app\Views\employee.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('employee', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(19): view('employee', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->index()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

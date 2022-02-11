@@ -38,4 +38,13 @@ public class CargoService {
             return null;
         }
     }
+
+    //DELETE CLIENT
+    public void  delete(Long id){
+        cargoRepository.deleteById(id);
+    }
+
+    public List<Cargo> findBySector(Long id){
+        return cargoRepository.findBySector(id);
+    }
 }

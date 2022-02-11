@@ -1,5 +1,6 @@
 package br.com.aula.CRUDCliente.sevices;
 
+import br.com.aula.CRUDCliente.model.Funcionario;
 import br.com.aula.CRUDCliente.model.Payment;
 import br.com.aula.CRUDCliente.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,8 @@ public class PaymentService {
     @Autowired
     PaymentRepository paymentRepository;
 
+    @Autowired
+    FuncionarioService funcionarioService;
     //LIST ALL CLIENTS
     public List<Payment> findAll(){
 
@@ -44,7 +47,9 @@ public class PaymentService {
 
     //SAVE PAGAMENTO
     public Payment save(Payment payment){
-
+        Funcionario funcionario = payment.getFuncionario();
+        funcionario.setDataUltimoPag(payment.getDate_payment());
+        funcionarioService.update(funcionario);
         return paymentRepository.save(payment);
     }
 }
