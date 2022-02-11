@@ -1,6 +1,7 @@
 package br.com.aula.CRUDCliente.controller;
 
 import br.com.aula.CRUDCliente.model.Funcionario;
+import br.com.aula.CRUDCliente.model.Usuario;
 import br.com.aula.CRUDCliente.sevices.FuncionarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -67,6 +68,17 @@ public class FuncionarioController {
         }
     }
 
+    @PostMapping(path = "/login")
+    public ResponseEntity<Funcionario> login(@RequestBody Usuario user){
+        Funcionario cliente = funcionarioService.login(user);
+
+        if(cliente != null){
+            return ResponseEntity.status(HttpStatus.OK).body(cliente);
+        }else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+
+    }
 
 
 }
