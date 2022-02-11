@@ -2,7 +2,6 @@ package br.com.aula.CRUDCliente.controller;
 
 import br.com.aula.CRUDCliente.model.Cargo;
 
-import br.com.aula.CRUDCliente.model.Sector;
 import br.com.aula.CRUDCliente.sevices.CargoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -41,6 +40,23 @@ public class CargoController {
             return ResponseEntity.status(HttpStatus.OK).body(cargo);
         }else{
             return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
+
+    @GetMapping(path = "/find/{id}")
+    public ResponseEntity<List<Cargo>>  findBySector(@PathVariable Long id){
+
+        return ResponseEntity.status(HttpStatus.OK).body(cargoService.findBySector(id));
+    }
+
+    //DELETE CLIENT
+    @DeleteMapping(path = "/delete/{id}")
+    public ResponseEntity<?> deletarCliente(@PathVariable  Long id){
+        if(cargoService.findById(id) != null){
+            cargoService.delete(id);
+            return ResponseEntity.status(HttpStatus.OK).body("Cargo deletado com sucesso!");
+        }else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cargo Não existe!");
         }
     }
 }

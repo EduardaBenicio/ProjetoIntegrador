@@ -23,11 +23,21 @@ public class SectorService {
         return SectorRepository.save(sector);
     }
 
+    public  Sector update(Sector sector){
+
+        return SectorRepository.save(sector);
+    }
+
     public  Sector findById(Long id){
         if(SectorRepository.findById(id).isPresent()){
             return SectorRepository.findById(id).get();
         }else{
             return null;
         }
+    }
+
+    //DELETE CLIENT
+    public void  delete(Long id){
+        SectorRepository.deleteById(id);
     }
 }

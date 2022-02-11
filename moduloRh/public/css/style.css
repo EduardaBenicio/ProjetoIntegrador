@@ -171,3 +171,11 @@
 	content: " ";
 	display: table;
 }
+
+.edit:hover{
+	color: blue;
+}
+
+.delete:hover{
+	color: red;
+}
