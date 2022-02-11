@@ -119,4 +119,19 @@ class Funcionarios extends BaseController
 
         return view('dashboard-employee', $res);
     }
+    
+    public function deleteFuncionario($id){
+
+        
+        $url = "http://localhost:8080/api/cliente/delete/{$id}";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);      
+        //Json para Array 
+        $resultado = json_decode(curl_exec($ch), true);
+
+        return redirect()->to(site_url("Funcionarios/index"));
+    }
+
 }
