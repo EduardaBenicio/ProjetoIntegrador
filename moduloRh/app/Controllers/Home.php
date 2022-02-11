@@ -14,29 +14,41 @@ class Home extends BaseController
     }
     public function logar(){
         $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
-        $url = "http://localhost:8080/api/clientes";
+        //$post['password'] = sha1($post['password']);
+        $url = "http://localhost:8080/api/login";
+        $payload = json_encode($post);
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+        // Use POST request
+        curl_setopt($ch, CURLOPT_POST, true);
 
+        // Set payload for POST request
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
+        // Set HTTP Header for POST request 
+        curl_setopt(
+            $ch,
+            CURLOPT_HTTPHEADER,
+            array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($payload)
+            )
+        );
+        
         //Json para Array 
         $funcioarios = json_decode(curl_exec($ch), true);
-        $exist = false;
-        foreach($funcioarios as $key){
-            if($key['user'] == $post['user'] && $key['password'] == $post['password']){
-                $_SESSION["user"] = [];
-                $_SESSION["user"]["name"] = $key["name"];
-                $_SESSION['user']['id'] = $key["id"];
-
-            }
-            
-        }
-       
-        if(isset($_SESSION["user"]["name"])){
+        
+        if($funcioarios != ""){
+            $_SESSION["user"]["name"] = $funcioarios["name"];
+            $_SESSION['user']['id'] = $funcioarios["id"];
             return redirect()->to(site_url("home/principal"));
         }else{
-            $this->session->setFlashdata('erro', 'Login ou senha inválida.');  
+            $this->session->setFlashdata('erro', 'Login ou senha inválida.'); 
+            return redirect()->to(site_url("home/login"));
         }
+        
     }
 
     public function logout(){ 
