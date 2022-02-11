@@ -2,13 +2,11 @@ package br.com.aula.CRUDCliente.sevices;
 
 
 import br.com.aula.CRUDCliente.model.Funcionario;
+import br.com.aula.CRUDCliente.model.Usuario;
 import br.com.aula.CRUDCliente.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 @Service
@@ -53,6 +51,11 @@ public class FuncionarioService {
     public Funcionario save(Funcionario cliente){
 
         return funcionarioRepository.save(cliente);
+    }
+    public Funcionario login(Usuario user){
+        
+
+        return funcionarioRepository.login(user.getUser(),user.getPassword());
     }
 
 
