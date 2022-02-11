@@ -33,11 +33,11 @@ public class Funcionario {
     private String name;
 
     @NonNull
-    @Column(name = "cpf", nullable = false)
+    @Column(name = "cpf", nullable = false, unique =true)
     private String cpf;
 
     @NonNull
-    @Column(name = "rg", nullable = false)
+    @Column(name = "rg", nullable = false, unique =true)
     private String rg;
 
     @NonNull
@@ -62,7 +62,7 @@ public class Funcionario {
     private String dataPag;
 
     @Column(name = "valorDevidoAtual")
-    private String valorDevidoAtual;
+    private double valorDevidoAtual;
 
     @NonNull
     @OneToOne
@@ -80,7 +80,7 @@ public class Funcionario {
     private String ctps;
 
     @NonNull
-    @Column(name = "usuario", nullable = false)
+    @Column(name = "usuario", nullable = false, unique =true)
     private String user;
 
     @NonNull
@@ -165,40 +165,51 @@ public class Funcionario {
 
         return descontoInss;
     }
-    public double valorDevido() throws ParseException {
+
+    public double valorDevido() {
         double valorDevido = 0;
         if(this.dataUltimoPag != null){
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            Date firstDate = sdf.parse(this.dataUltimoPag);
-            Date secondDate = new Date();
+            try {
+                Date firstDate = sdf.parse(this.dataUltimoPag);
+                Date secondDate = new Date();
 
-            long diff = secondDate.getTime() - firstDate.getTime();
+                long diff = secondDate.getTime() - firstDate.getTime();
 
-            TimeUnit time = TimeUnit.DAYS;
-            long diffrence = time.convert(diff, TimeUnit.MILLISECONDS);
+                TimeUnit time = TimeUnit.DAYS;
+                long diffrence = time.convert(diff, TimeUnit.MILLISECONDS);
 
-            Calendar datas = new GregorianCalendar();
-            int quantDias = datas.getActualMaximum (Calendar.DAY_OF_MONTH);
-            double val = this.cargo.getSalario()/quantDias;
+                Calendar datas = new GregorianCalendar();
+                int quantDias = datas.getActualMaximum (Calendar.DAY_OF_MONTH);
+                double val = this.cargo.getSalario()/quantDias;
 
-            valorDevido = val * diffrence;
+                this.valorDevidoAtual = Math.round(val * diffrence);
+            }catch (ParseException e){
+                e.getMessage();
+            }
+
+
         }else{
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            Date firstDate = sdf.parse(this.dataIngresso);
-            Date secondDate = new Date();
+            try {
+                Date firstDate = sdf.parse(this.dataIngresso);
+                Date secondDate = new Date();
 
-            long diff = secondDate.getTime() - firstDate.getTime();
+                long diff = secondDate.getTime() - firstDate.getTime();
 
-            TimeUnit time = TimeUnit.DAYS;
-            long diffrence = time.convert(diff, TimeUnit.MILLISECONDS);
+                TimeUnit time = TimeUnit.DAYS;
+                long diffrence = time.convert(diff, TimeUnit.MILLISECONDS);
 
-            Calendar datas = new GregorianCalendar();
-            int quantDias = datas.getActualMaximum (Calendar.DAY_OF_MONTH);
-            double val = this.cargo.getSalario()/quantDias;
+                Calendar datas = new GregorianCalendar();
+                int quantDias = datas.getActualMaximum(Calendar.DAY_OF_MONTH);
+                double val = this.cargo.getSalario() / quantDias;
 
-            valorDevido = val * diffrence;
+                this.valorDevidoAtual = Math.round(val * diffrence);
+
+            }catch(ParseException e){
+                e.getMessage();
+            }
         }
-
         return valorDevido;
     }
 

@@ -1,5 +1,6 @@
 <?php include 'masterhead.php';?>
 
+
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
@@ -24,7 +25,7 @@
                                         <tr>
                                             <th>Nome</th>
                                             <th>Cargo</th>
-                                            <th>Idade</th>
+                                            <th>Data de nascimento</th>
                                             <th>Data de início</th>
                                             <th>Salario</th>
                                         </tr>
@@ -36,22 +37,30 @@
                                             <th>Nascimento</th>
                                             <th>Data de início</th>
                                             <th>Salario</th>
+                                            <th>Abri</th>
                                         </tr>
                                     </tfoot>
+                            
                                     <tbody>
-                                        <?php foreach($funcionarios as $key =>$item):?>
-                                            <tr>
-                                                <th><?=$item['name']?></th>
-                                                <th><?=$item['cargo']['name']?></th>
-                                                <th><?=$item['dataNasc']?></th>
-                                                <th><?=$item['dataIngresso']?></th>
-                                                <th><?=$item['cargo']['salario']?></th>
-                                            </tr>
-                                        <?php endforeach;?>
+                                        
+                                            <?php foreach($funcionarios as $key =>$item):?>
+                                                
+                                                    <tr>
+                                                        <th><?=$item['name']?></th>
+                                                        <th><?=$item['cargo']['name']?></th>
+                                                        <th><?=$item['dataNasc']?></th>
+                                                        <th><?=$item['dataIngresso']?></th>
+                                                        <th>R$<?=$item['cargo']['salario'] .",00"?></th>
+                                                        <th><a class="btn btn-primary" href="<?=site_url("funcionarios/dashboardEmployee/{$item['id']}")?>" role="button">Ver mais</a></th>
+                                                    </tr>
+                                                
+                                            <?php endforeach;?>
+                                           
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </main>
+
 <?php include 'footer.php'; ?>

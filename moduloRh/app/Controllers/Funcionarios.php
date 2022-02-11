@@ -6,6 +6,8 @@ class Funcionarios extends BaseController
 {
     public function index()
     {
+
+        
         $url = "http://localhost:8080/api/clientes";
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -13,6 +15,7 @@ class Funcionarios extends BaseController
 
         //Json para Array 
         $view['funcionarios'] = json_decode(curl_exec($ch), true); 
+        
 
         return view('employee', $view);
     }
@@ -59,6 +62,12 @@ class Funcionarios extends BaseController
 
         unset($post['setores']);
         $post['cargo'] = $cargos;
+
+      
+        $post['dataNasc'] = date('d/m/Y', strtotime($post['dataNasc']));
+        $post['dataIngresso'] = date('d/m/Y', strtotime($post['dataIngresso']));
+        $post['dataIngressoCargo'] = date('d/m/Y', strtotime($post['dataIngressoCargo']));
+        $post['password'] = sha1($post['password']);
         $payload = json_encode($post);
        
         $url = "http://localhost:8080/api/salvarcliente";
@@ -94,5 +103,20 @@ class Funcionarios extends BaseController
         
 
         return view('employee', $view);
+    }
+
+    public function dashboardEmployee($idFuncionario){
+        $url = "http://localhost:8080/api/cliente/$idFuncionario";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+        //Json para Array 
+        $funcionario = json_decode(curl_exec($ch), true);
+
+        $res['funcionario'] = $funcionario;
+       
+
+        return view('dashboard-employee', $res);
     }
 }

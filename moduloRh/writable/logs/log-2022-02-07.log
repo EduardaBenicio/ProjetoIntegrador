@@ -1,0 +1,11 @@
+CRITICAL - 2022-02-07 18:48:16 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\moduloRh\app\Views\employee.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 42, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('employee', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(19): view('employee', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->index()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
