@@ -2,9 +2,7 @@ package br.com.aula.CRUDCliente.sevices;
 
 import br.com.aula.CRUDCliente.model.AjusteSalarial;
 import br.com.aula.CRUDCliente.model.Cargo;
-import br.com.aula.CRUDCliente.model.Payment;
 import br.com.aula.CRUDCliente.repository.AjusteSalarialRepository;
-import br.com.aula.CRUDCliente.repository.CargoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
