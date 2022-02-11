@@ -8,6 +8,9 @@ import java.util.concurrent.TimeUnit;
 import javax.persistence.*;
 
 import lombok.*;
+
+
+
 //ANNOTATION LOMBOK
 @Getter
 @Setter
@@ -27,7 +30,7 @@ public class Ferias {
 
     @NonNull
     @OneToOne
-    @JoinColumn(name = "IdCliente", referencedColumnName = "IdCliente")
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
     private Funcionario funcionario;
 
     @NonNull

@@ -3,6 +3,8 @@ package br.com.aula.CRUDCliente.controller;
 import br.com.aula.CRUDCliente.model.Funcionario;
 import br.com.aula.CRUDCliente.model.Usuario;
 import br.com.aula.CRUDCliente.sevices.FuncionarioService;
+
+import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

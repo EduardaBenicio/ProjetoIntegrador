@@ -17,6 +17,7 @@ use App\Controllers\Home;
 
        
         <script src="<?=base_url("js/bootstrap.min.js")?>"></script>
+        <script src="<?=base_url("js/alerts.js")?>"></script>
         <script src="<?=base_url("js/jquery-1.11.1.min.js")?>"></script>
     </head>
     <body class="sb-nav-fixed">

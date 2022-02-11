@@ -20,7 +20,7 @@ use App\Controllers\Home;
     <script src="<?= base_url("js/bootstrap.min.js") ?>"></script>
     <script src="<?= base_url("js/jquery-1.11.1.min.js") ?>"></script>
 </head>
-<?php if(isset($_SESSION['user']['name'])):?>
+
    
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -347,5 +347,5 @@ use App\Controllers\Home;
         </form>
     </div>
 </body>
-<?php endif;?>
+
 </html>

@@ -32,7 +32,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Setores</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Ver detalhes</a>
+                                        <a class="small text-white stretched-link" href="<?=site_url("SetorController/index")?>">Ver detalhes</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Cargos</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Ver detalhes</a>
+                                        <a class="small text-white stretched-link" href="<?=site_url("CargoController/index")?>">Ver detalhes</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

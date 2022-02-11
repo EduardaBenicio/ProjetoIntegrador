@@ -18,6 +18,7 @@ public class FeriasService {
     }
 
     public Ferias save(Ferias ferias){
+
         if(ferias.jaPodeTerFerias(ferias.getFuncionario())){
             ferias.calcularValorDasFerias();
             return feriasRepository.save(ferias);

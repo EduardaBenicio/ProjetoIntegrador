@@ -25,7 +25,7 @@ public class Funcionario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    @Column(name = "IdCliente")
+    @Column(name = "id_cliente")
     private Long id;
 
     @NonNull

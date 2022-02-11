@@ -33,6 +33,12 @@ public class SectorController {
         return ResponseEntity.status(HttpStatus.CREATED).body(sectorService.save(sector));
     }
 
+    @PostMapping(path = "/editSector")
+    public ResponseEntity<Sector> EditarSetor(@RequestBody Sector sector){
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(sectorService.update(sector));
+    }
+
     //FIND BY ID
     @GetMapping(path = "/{id}")
     public ResponseEntity<Sector> findSector(@PathVariable Long id){
@@ -43,6 +49,17 @@ public class SectorController {
             return ResponseEntity.status(HttpStatus.OK).body(sector);
         }else{
             return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
+
+    //DELETE CLIENT
+    @DeleteMapping(path = "/delete/{id}")
+    public ResponseEntity<?> deletarCliente(@PathVariable  Long id){
+        if(sectorService.findById(id) != null){
+            sectorService.delete(id);
+            return ResponseEntity.status(HttpStatus.OK).body("Setor deletado com sucesso!");
+        }else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Setor Não existe!");
         }
     }
 }

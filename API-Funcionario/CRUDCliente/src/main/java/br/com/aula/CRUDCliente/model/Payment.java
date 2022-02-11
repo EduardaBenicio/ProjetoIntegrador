@@ -27,12 +27,12 @@ public class Payment {
     @Column(name = "date_payment", nullable = false)
     private String date_payment;
 
-    @NonNull
+
     @Column(name = "value_paid", nullable = false)
     private double value_paid;
 
-    @NonNull
+
     @OneToOne
-    @JoinColumn(name = "IdCliente", referencedColumnName = "IdCliente")
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
     private Funcionario funcionario;
 }

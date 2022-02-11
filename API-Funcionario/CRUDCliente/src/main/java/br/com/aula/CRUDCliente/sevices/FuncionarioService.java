@@ -48,8 +48,6 @@ public class FuncionarioService {
     //DELETE CLIENT
     public void  delete(Long id){
         funcionarioRepository.deleteById(id);
-
-
     }
 
     //SAVE CLIENTS

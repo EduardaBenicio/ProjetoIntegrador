@@ -45,6 +45,7 @@ public class FeriasController {
             return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
+
     @PutMapping(path = "/update")
     public ResponseEntity<Ferias> atualizar(@RequestBody Ferias f){
         if(feriasService.findById(f.getId()) != null){
@@ -54,6 +55,7 @@ public class FeriasController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
+
     @DeleteMapping(path = "/delete/{id}")
     public ResponseEntity<?> deletarFerias(@PathVariable Long id){
         if(feriasService.findById(id) != null){

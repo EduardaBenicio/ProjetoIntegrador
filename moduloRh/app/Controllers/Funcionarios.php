@@ -15,6 +15,7 @@ class Funcionarios extends BaseController
 
         //Json para Array 
         $view['funcionarios'] = json_decode(curl_exec($ch), true); 
+        
 
         return view('employee', $view);
     }
@@ -49,7 +50,7 @@ class Funcionarios extends BaseController
     {
         $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
         $payload = json_encode($post);
-
+        
         $idCargo = (int) $post["cargo"];
         $url = "http://localhost:8080/api/cargo/$idCargo";
         $ch = curl_init($url);
@@ -91,10 +92,6 @@ class Funcionarios extends BaseController
         );
         //Json para Array 
         $resultado = json_decode(curl_exec($ch), true);
-        print "<pre>";
-        print_r($resultado);
-
-
         
         $url = "http://localhost:8080/api/clientes";
         $ch = curl_init($url);
