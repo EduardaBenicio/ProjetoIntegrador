@@ -10,7 +10,6 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Painel de funcionários</li>
                         </ol>
-            <?php if(isset($funcionarios)):?>
                         <a class="btn btn-primary" href="<?=site_url("funcionarios/registerEmployee")?>" role="button">Cadastrar funcionário</a>
                         
                         <div class="row">
@@ -92,25 +91,9 @@
                                     </tbody>
                                 </table>
                             </div>
-                            
                         </div>
                     </div>
                 </main>
-        <?php else:?>
-            <div id="layoutError_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6">
-                                <div class="text-center mt-4">
-                                    <p class="lead">Sem conexão com o servidor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        <?php endif;?>
 
 <?php include 'footer.php'; ?>
 <?php else:?>
