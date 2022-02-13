@@ -1,3 +1,4 @@
+<?php if(isset($_SESSION["user"]["name"])):?>
 <?php include 'masterhead.php';?>
 
             <div id="layoutSidenav_content">
@@ -104,7 +105,7 @@
                                                 </th>
                                                 <!--DELETE-->
                                                 <th>
-                                                    <a href="<?=site_url("CargoController/deleteCargo/{$item['id']}")?>" onclick='return confirmDeleteSetor();'>
+                                                    <a href="<?=site_url("CargoController/deleteCargo/{$item['id']}")?>" onclick='return confirmDeleteCargo();'>
                                                         <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                                             <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 
                                                                 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59
@@ -125,3 +126,57 @@
                     </div>
                 </main>
 <?php include 'footer.php'; ?>
+<?php else:?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>erro 401 - RH</title>
+        <link href="<?=base_url("css/styles.css")?>" rel="stylesheet" />
+        <script src="<?=base_url("js/all.min.js")?>" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="layoutError">
+            <div id="layoutError_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <div class="text-center mt-4">
+                                    <h1 class="display-1">401</h1>
+                                    <p class="lead">Não autorizadp</p>
+                                    <p>Acesso a página negado.</p>
+                                    <a href="<?=site_url("home/index")?>">
+                                        <i class="fas fa-arrow-left me-1"></i>
+                                        Retorne ao login
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="layoutError_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="<?=base_url("js/bootstrap.bundle.min.js")?>" crossorigin="anonymous"></script>
+        <script src="<?=base_url("js/scripts.js")?>"></script>>
+    </body>
+</html>
+<?php endif;?>

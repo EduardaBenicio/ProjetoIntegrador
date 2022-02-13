@@ -14,9 +14,7 @@ class CargoController extends BaseController
         //Json para Array 
         $view['setores'] = json_decode(curl_exec($ch), true); 
 
-        /* echo "<pre>";
-        var_dump($view);
-        die(); */
+        
         
         return view('cargos', $view);
 
@@ -33,7 +31,7 @@ class CargoController extends BaseController
         //Json para Array 
         $view['cargos'] = json_decode(curl_exec($ch), true); 
 
-       
+        
 
         $url = "http://localhost:8080/api/sector/all";
         $ch = curl_init($url);

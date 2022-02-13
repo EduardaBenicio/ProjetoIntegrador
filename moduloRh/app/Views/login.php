@@ -36,10 +36,8 @@
                                             <label class="col-md-2 control-label" for="password">Senha:</label>
                                             <input type="password" name="password" class="form-control" id="password" placeholder="Insira sua senha">
                                         </div>
-                                        <div class="form-group col-md-2">
-                                            <?php if (isset($_SESSION['erro'])) : ?>
-                                                <?= $_SESSION['erro'] ?>
-                                            <?php endif; ?>
+                                        <div class="text-center form-group col-md-6">
+                                                <?=session("erro");?>
                                         </div>
                                         </br>
                                         <div class="text-center form-group">
