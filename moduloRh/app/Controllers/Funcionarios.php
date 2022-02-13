@@ -15,7 +15,8 @@ class Funcionarios extends BaseController
 
         //Json para Array 
         $view['funcionarios'] = json_decode(curl_exec($ch), true);
-
+        
+        
 
         return view('employee', $view);
     }
@@ -187,7 +188,7 @@ class Funcionarios extends BaseController
 
         $res['funcionario'] = $funcionario;
 
-
+        
         return view('dashboard-employee', $res);
     }
 
