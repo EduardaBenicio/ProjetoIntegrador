@@ -57,6 +57,11 @@ public class FuncionarioService {
     }
 
     public Funcionario login(Usuario user){
+
         return funcionarioRepository.login(user.getUser(),user.getPassword());
+    }
+
+    public  List<Funcionario> searchByName(String name){
+        return funcionarioRepository.searchByName(name);
     }
 }

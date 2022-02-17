@@ -82,5 +82,11 @@ public class FuncionarioController {
 
     }
 
+    @GetMapping(path = "/searchByName/{name}")
+    public ResponseEntity<List<Funcionario>> searchByName2(@PathVariable String name){
+
+        return ResponseEntity.status(HttpStatus.OK).body(funcionarioService.searchByName(name));
+    }
+
 
 }

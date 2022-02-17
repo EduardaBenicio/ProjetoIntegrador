@@ -26,6 +26,8 @@
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
+                                            <th>CPF</th>
+                                            <th>Usuário</th>
                                             <th>Cargo</th>
                                             <th>Setor</th>
                                             <th>Data de nascimento</th>
@@ -38,6 +40,8 @@
                                     <tfoot>
                                         <tr>
                                             <th>Nome</th>
+                                            <th>CPF</th>
+                                            <th>Usuário</th>
                                             <th>Cargo</th>
                                             <th>Setor</th>
                                             <th>Nascimento</th>
@@ -55,6 +59,8 @@
                                                 
                                                     <tr>
                                                         <th><?=$item['name']?></th>
+                                                        <th><?=$item['cpf']?></th>
+                                                        <th><?=$item['user']?></th>
                                                         <th><?=$item['cargo']['name']?></th>
                                                         <th><?=$item['cargo']['sector']['name']?></th>
                                                         <th><?=$item['dataNasc']?></th>

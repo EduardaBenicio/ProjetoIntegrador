@@ -14,7 +14,7 @@ class Home extends BaseController
     }
     public function logar(){
         $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
-        //$post['password'] = sha1($post['password']);
+        $post['password'] = sha1($post['password']);
         $url = "http://localhost:8080/api/login";
         $payload = json_encode($post);
         $ch = curl_init($url);
