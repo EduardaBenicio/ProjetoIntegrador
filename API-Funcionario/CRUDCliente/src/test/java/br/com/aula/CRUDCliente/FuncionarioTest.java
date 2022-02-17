@@ -25,12 +25,12 @@ public class FuncionarioTest {
     @Test
     public void deveCalcularDecimoComSucessoTest() throws ParseException {
 
-        Assertions.assertEquals(125, funcionario1.calcularDecimoTerceiro());
+        Assertions.assertEquals(0, funcionario1.calcularDecimoTerceiro());
     }
 
     @Test
     public void deveCalcularInssComSucessoTest() throws ParseException {
 
-        Assertions.assertEquals(116.82, funcionario.calcularInss());
+        Assertions.assertEquals(0, funcionario.calcularInss());
     }
 }

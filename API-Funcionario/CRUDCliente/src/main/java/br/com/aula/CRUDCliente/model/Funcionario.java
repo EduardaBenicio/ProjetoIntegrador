@@ -120,19 +120,31 @@ public class Funcionario {
     @Column(name = "dataUltimoPag")
     private String dataUltimoPag;
 
-    public double calcularDecimoTerceiro() throws ParseException {
+    @Column(name = "decimoTerceiro")
+    private double decimoTerceiro;
+
+    @Column(name = "inss")
+    private double inss;
+
+    public double calcularDecimoTerceiro() {
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = formatador.parse(this.dataIngresso);
+        double resultado = 0;
+        try{
+            Date date = formatador.parse(this.dataIngresso);
 
 
-        Calendar dataIgresso = Calendar.getInstance();
-        Calendar dataAtual = Calendar.getInstance();
-        dataIgresso.setTime(date);
+            Calendar dataIgresso = Calendar.getInstance();
+            Calendar dataAtual = Calendar.getInstance();
+            dataIgresso.setTime(date);
 
-        int mesesTrabalhados = +dataAtual.get(Calendar.MONTH)-dataIgresso.get(Calendar.MONTH);
+            int mesesTrabalhados = +dataAtual.get(Calendar.MONTH)-dataIgresso.get(Calendar.MONTH);
 
-        double calculo = this.cargo.getSalario() / 12;
-        double resultado = calculo * mesesTrabalhados;
+            double calculo = this.cargo.getSalario() / 12;
+            this.decimoTerceiro = Math.round(calculo * mesesTrabalhados);
+        }catch (ParseException e){
+            e.getMessage();
+        }
+
 
         return resultado;
     }
@@ -142,25 +154,25 @@ public class Funcionario {
         double descontoInss = 0;
         if(salario <= 1212){
             double v = salario * 7.5;
-            descontoInss = v / 100;
+            this.inss = Math.round(v / 100);
         }else if(salario <=2427.35){
             double v = (salario-1212)*9;
             double v1 = 1212 * 7.5;
 
-            descontoInss = (v+v1)/100;
+            this.inss = Math.round((v+v1)/100);
         }else if(salario <=3641.03){
             double v = 1212*7.5;
             double v1 = (2427.35-1212)*9;
-            double v2 = (salario-2427.35)*12;
+            double v2 = Math.round((salario-2427.35)*12);
 
-            descontoInss = (v+v1+v2)/100;
+            this.inss = (v+v1+v2)/100;
         }else if (salario <=7087.22){
             double v = 1212*7.5;
             double v1 = (2427.35-1212)*9;
             double v2 = (7087.22-2427.35)*12;
             double v3 = (salario-7087.22)*14;
 
-            descontoInss = (v+v1+v2+v3)/100;
+            this.inss = Math.round((v+v1+v2+v3)/100);
         }
 
         return descontoInss;

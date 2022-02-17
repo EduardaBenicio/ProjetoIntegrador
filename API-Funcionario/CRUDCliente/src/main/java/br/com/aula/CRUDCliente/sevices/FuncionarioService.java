@@ -31,6 +31,8 @@ public class FuncionarioService {
         if(funcionarioRepository.findById(id).isPresent()){
             Funcionario funcionario = funcionarioRepository.findById(id).get();
             funcionario.valorDevido();
+            funcionario.calcularInss();
+            funcionario.calcularDecimoTerceiro();
             update(funcionario);
             return funcionario;
         }else{
@@ -62,6 +64,7 @@ public class FuncionarioService {
     }
 
     public  List<Funcionario> searchByName(String name){
+
         return funcionarioRepository.searchByName(name);
     }
 }
