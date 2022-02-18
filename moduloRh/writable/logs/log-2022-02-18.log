@@ -1,0 +1,52 @@
+CRITICAL - 2022-02-18 17:04:12 --> Undefined index: name
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Home.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 44, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Home->logar()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 17:14:35 --> Undefined variable: setor
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-employee.php(267): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 267, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(62): view('register-employ...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->registerEmployee()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-18 17:36:49 --> Invalid file: register-setor/1.php
+#0 C:\xampp\htdocs\moduloRh\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register-setor/...')
+#1 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-setor/...', Array, true)
+#2 C:\xampp\htdocs\moduloRh\app\Controllers\SetorController.php(27): view('register-setor/...')
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\SetorController->registerSetor('1')
+#4 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SetorController))
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-18 17:41:59 --> Invalid file: SetorController/registerSetor.php
+#0 C:\xampp\htdocs\moduloRh\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('SetorController...')
+#1 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('SetorController...', Array, true)
+#2 C:\xampp\htdocs\moduloRh\app\Controllers\SetorController.php(70): view('SetorController...', Array)
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\SetorController->salvar()
+#4 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SetorController))
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-18 17:44:09 --> Array to string conversion
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\SetorController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\SetorController->salvar()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SetorController))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 17:44:31 --> Invalid file: register-setor/1.php
+#0 C:\xampp\htdocs\moduloRh\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register-setor/...')
+#1 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-setor/...', Array, true)
+#2 C:\xampp\htdocs\moduloRh\app\Controllers\SetorController.php(28): view('register-setor/...')
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\SetorController->registerSetor('1')
+#4 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SetorController))
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

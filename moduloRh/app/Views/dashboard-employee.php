@@ -11,6 +11,11 @@
             </ol>
 
             <?php if(isset($funcionario['name'])):?>
+                <?php if(isset($alert)):?>
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        Funcionário adicionado com sucesso!
+                    </div>
+                <?php endif;?>
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-primary text-white mb-4">
@@ -116,8 +121,16 @@
                                 <h10> R$<?= $funcionario['valorDevidoAtual']. ',00' ?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
+                            <h8><b>Valor do desconto do INSS:</b></h8>
+                                <h10> R$<?= $funcionario['inss']?></h10>
+                            </div>
+                            <div class="col-xl-9 col-md-6">
                                 <h8><b>Data do Ultimo Pagamento:</b></h8>
                                 <h10> <?= $funcionario['dataUltimoPag'] ?></h10>
+                            </div>
+                            <div class="col-xl-9 col-md-6">
+                                <h8><b>Décimo Terceiro:</b></h8>
+                                <h10> <?= $funcionario['decimoTerceiro'] ?></h10>
                             </div>
                         
                         </div>

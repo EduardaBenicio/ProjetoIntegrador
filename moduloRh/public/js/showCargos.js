@@ -22,7 +22,7 @@ $(document).ready(function(){
                         $(".cargo").append("<option value='"+ value['id'] +"'>"+ value['name'] +"</option> ");
                     });
                 }
-                console.log(data);
+                
             }
         });
     });
