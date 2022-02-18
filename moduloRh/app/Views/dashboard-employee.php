@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-xl-3 col-md-6  ">
                         <div class="card bg-primary text-white mb-4">
-                            <a class="btn btn-primary" href="<?= site_url("funcionarios/registerEmployee") ?>" role="button">Registrar promoção</a>
+                            <a class="btn btn-primary" href="<?= site_url("funcionarios/promocao/{$funcionario['id']}") ?>" role="button">Registrar promoção</a>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">

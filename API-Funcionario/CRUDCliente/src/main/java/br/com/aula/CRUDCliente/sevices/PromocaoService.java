@@ -41,6 +41,11 @@ public class PromocaoService {
         }
     }
     public void delete(Long id){
+
         promocaoRepository.deleteById(id);
+    }
+    public  List<Promocao>findByIdUser(Long id){
+
+        return promocaoRepository.findByIdUser(id);
     }
 }

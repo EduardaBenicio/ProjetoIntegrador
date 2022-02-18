@@ -205,4 +205,127 @@ class Funcionarios extends BaseController
 
         return redirect()->to(site_url("Funcionarios/index"));
     }
+
+    public function promocao($id){
+
+        $url = "http://localhost:8080/api/cliente/$id";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+        //Json para Array 
+        $funcionario = json_decode(curl_exec($ch), true);
+
+        $res['funcionario'] = $funcionario;
+
+
+        $url = "http://localhost:8080/api/promocao/user/{$id}";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+        //Json para Array 
+        $funcionario = json_decode(curl_exec($ch), true);
+
+        $res['promocoes'] = $funcionario;
+
+        // echo "<pre>";
+        // print_r($res);
+        // die();
+
+        return view('promocoes', $res);
+
+
+    }
+
+    public function promover($id){
+
+        $url = "http://localhost:8080/api/sector/all";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+        //Json para Array 
+        $view['setor'] = json_decode(curl_exec($ch), true); 
+
+        $view['id'] = $id;
+        
+        return view('register-promocao', $view);
+
+    }
+
+    public function cargosDoSetor(){
+        
+        $idSetor = filter_input(INPUT_POST, 'idSetor');
+
+        $url = "http://localhost:8080/api/cargo/find/$idSetor";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+        //Json para Array 
+        $view['cargo'] = curl_exec($ch); 
+
+
+        return $view['cargo'];
+    }
+
+    public function salvarPromocao(){
+        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+
+        $url = "http://localhost:8080/api/cliente/{$post['id_user']}";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+        //Json para Array 
+        $view['funcionario'] = json_decode(curl_exec($ch), true);
+        
+        $url = "http://localhost:8080/api/cargo/{$post['cargo']}";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+        //Json para Array 
+        $view['cargoNovo'] = json_decode(curl_exec($ch), true);
+        
+        $data['funcionario'] = $view['funcionario'];
+        $data['cargoAntigo'] = $view['funcionario']['cargo'];
+        $data['cargoNovo'] = $view['cargoNovo'];
+        $data['dataDaMudanca'] = date('d/m/Y');
+
+        
+        $payload = json_encode($data);
+
+        $url = "http://localhost:8080/api/promocao/save";
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+            // Use POST request
+            curl_setopt($ch, CURLOPT_POST, true);
+
+            // Set payload for POST request
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
+            // Set HTTP Header for POST request 
+            curl_setopt(
+                $ch,
+                CURLOPT_HTTPHEADER,
+                array(
+                    'Content-Type: application/json',
+                    'Content-Length: ' . strlen($payload)
+                )
+            );
+            //Json para Array 
+            $resultado = json_decode(curl_exec($ch), true);
+
+
+            return redirect()->to(site_url("Funcionarios/promocao/{$resultado['funcionario']['id']}"));
+             
+            // echo "<pre>";
+            // print_r($resultado['funcionario']['id']);
+            // die();
+        
+    }
 }

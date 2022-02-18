@@ -1,3 +1,4 @@
+
 function confirmDeleteSetor()
 {
     return confirm("Deseja realmente excluir esse setor?\n ESTA AÇÃO NÃO PODE SER DESFEITA!");
@@ -28,3 +29,6 @@ function alertSetorAtt(){
 function alertCargoAtt(){
     alert("Cargo atualizado com sucesso!");
 }
+
+
+
