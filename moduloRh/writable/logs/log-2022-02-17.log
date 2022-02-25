@@ -1,0 +1,225 @@
+<<<<<<< HEAD
+CRITICAL - 2022-02-17 14:31:11 --> Undefined index: cargo
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 135, Array)
+=======
+CRITICAL - 2022-02-17 13:40:24 --> Undefined index: cargo
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(131): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 131, Array)
+>>>>>>> acbf937f7be9dcb07c0771c3377ba75730411944
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarApi()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+<<<<<<< HEAD
+CRITICAL - 2022-02-17 14:56:33 --> Undefined index: name
+#0 C:\xampp\htdocs\moduloRh\app\Views\promocoes.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('promocoes', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(235): view('promocoes', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->promocao('5')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 15:00:06 --> Undefined index: dataDaMundanca
+#0 C:\xampp\htdocs\moduloRh\app\Views\promocoes.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 81, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('promocoes', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(234): view('promocoes', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->promocao('5')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 15:02:12 --> Undefined index: funcionario
+#0 C:\xampp\htdocs\moduloRh\app\Views\promocoes.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('promocoes', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(234): view('promocoes', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->promocao('5')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 15:27:06 --> Invalid file: register-promocoes.php
+#0 C:\xampp\htdocs\moduloRh\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register-promoc...')
+#1 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-promoc...', Array, true)
+#2 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(261): view('register-promoc...', Array)
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->promover('5')
+#4 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-17 15:27:33 --> Undefined index: id
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-promocao.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 68, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-promoc...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(261): view('register-promoc...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->promover('5')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 15:28:42 --> Undefined index: name
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-promocao.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 69, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-promoc...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(261): view('register-promoc...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->promover('5')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 15:50:11 --> Undefined index: id_Sector
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-promocao.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 93, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-promoc...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(261): view('register-promoc...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->promover('5')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 16:11:19 --> Undefined index: id
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-promocao.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 72, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-promoc...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(261): view('register-promoc...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->promover('5')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 18:20:38 --> Undefined index: id
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 276, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarPromocao()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 18:25:38 --> Undefined variable: post
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(287): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 287, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarPromocao()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 18:27:48 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarPromocao()
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-17 18:30:05 --> Undefined index: cargo
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(284): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 284, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarPromocao()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 18:40:34 --> Undefined index: funcionario
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(285): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 285, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarPromocao()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 18:49:21 --> Array to string conversion
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(298): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 298, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarPromocao()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 18:55:11 --> Array to string conversion
+#0 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(297): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 297, Array)
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->salvarPromocao()
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+=======
+CRITICAL - 2022-02-17 14:56:04 --> Undefined index: name
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-payment.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 22, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-paymen...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\Pagamentos.php(36): view('register-paymen...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Pagamentos->registerPayment('6')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pagamentos))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 15:24:10 --> date() expects parameter 2 to be int, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'date() expects ...', 'C:\\xampp\\htdocs...', 89, Array)
+#1 C:\xampp\htdocs\moduloRh\app\Views\register-employee.php(89): date('02/02/2002', 'd-m-Y')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-employ...', Array, true)
+#5 C:\xampp\htdocs\moduloRh\app\Controllers\Funcionarios.php(62): view('register-employ...', Array)
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->registerEmployee('6')
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#8 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-17 15:42:47 --> Invalid file: register-ajuste.php
+#0 C:\xampp\htdocs\moduloRh\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register-ajuste...')
+#1 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ajuste', Array, true)
+#2 C:\xampp\htdocs\moduloRh\app\Controllers\AjustesSalariais.php(41): view('register-ajuste', Array)
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\AjustesSalariais->registerAjuste('6')
+#4 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjustesSalariais))
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-17 15:53:49 --> Illegal string offset 'name'
+#0 C:\xampp\htdocs\moduloRh\app\Views\ajustes-salariais.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 52, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('ajustes-salaria...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\AjustesSalariais.php(20): view('ajustes-salaria...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\AjustesSalariais->index()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjustesSalariais))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 15:55:56 --> Undefined variable: funcionarios
+#0 C:\xampp\htdocs\moduloRh\app\Views\ajustes-salariais.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('ajustes-salaria...', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\AjustesSalariais.php(22): view('ajustes-salaria...', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\AjustesSalariais->index()
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjustesSalariais))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 15:57:12 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-ajuste.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 22, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ajuste', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\AjustesSalariais.php(43): view('register-ajuste', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\AjustesSalariais->registerAjuste('1')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjustesSalariais))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 16:04:56 --> Undefined variable: dados
+#0 C:\xampp\htdocs\moduloRh\app\Views\register-ajuste.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 39, Array)
+#1 C:\xampp\htdocs\moduloRh\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ajuste', Array, true)
+#4 C:\xampp\htdocs\moduloRh\app\Controllers\AjustesSalariais.php(41): view('register-ajuste', Array)
+#5 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\AjustesSalariais->registerAjuste('1')
+#6 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AjustesSalariais))
+#7 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+>>>>>>> acbf937f7be9dcb07c0771c3377ba75730411944

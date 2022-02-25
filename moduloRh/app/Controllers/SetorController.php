@@ -58,8 +58,9 @@ class SetorController extends BaseController
         //Json para Array 
         $resultado = json_decode(curl_exec($ch), true);
         
-       
-        return redirect()->to(site_url("SetorController/registerSetor"));
+        $view["setor"] = $resultado;
+        $view["alert"] = 1;
+        return view("dashboard-setor", $view);
     }
 
     public function editSetor($id, $name){

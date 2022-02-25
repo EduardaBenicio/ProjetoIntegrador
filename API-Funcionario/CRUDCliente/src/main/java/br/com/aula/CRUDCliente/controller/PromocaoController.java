@@ -30,11 +30,11 @@ public class PromocaoController {
         return ResponseEntity.status(HttpStatus.OK).body(promocaoService.findAll());
     }
     @PostMapping(path = "/save")
-    public ResponseEntity<Promocao> salvarferias(@RequestBody Promocao p){
+    public ResponseEntity<Promocao> salvarPromocao(@RequestBody Promocao p){
         return ResponseEntity.status(HttpStatus.CREATED).body(promocaoService.save(p));
     }
     @GetMapping(path = "/{id}")
-    public ResponseEntity<Promocao> findFerias(@PathVariable Long id){
+    public ResponseEntity<Promocao> findPromocao(@PathVariable Long id){
         Promocao p = promocaoService.findById(id);
 
         if(p != null){
@@ -43,6 +43,15 @@ public class PromocaoController {
             return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
+
+    @GetMapping(path = "user/{id}")
+    public ResponseEntity<List<Promocao>> findByIdUser(@PathVariable Long id){
+
+        return ResponseEntity.status(HttpStatus.OK).body(promocaoService.findByIdUser(id));
+
+    }
+
+
     @PutMapping(path = "/update")
     public ResponseEntity<Promocao> atualizar(@RequestBody Promocao p){
         if(promocaoService.findById(p.getId()) != null){

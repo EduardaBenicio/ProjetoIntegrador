@@ -103,9 +103,9 @@ class CargoController extends BaseController
         );
         //Json para Array 
         $resultado = json_decode(curl_exec($ch), true);
-        
-       
-        return redirect()->to(site_url("CargoController/registerCargo"));
+        $view['cargo'] = $resultado;
+        $view['alert'] = 1;
+        return view('dashboard-cargo', $view);
     }
 
     public function editCargo($id){
