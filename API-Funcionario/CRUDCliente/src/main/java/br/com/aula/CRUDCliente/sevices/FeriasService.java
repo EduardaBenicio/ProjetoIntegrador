@@ -35,8 +35,13 @@ public class FeriasService {
         }
     }
 
-    public Ferias update(Ferias f){
-        return feriasRepository.save(f);
+    public Ferias update(Ferias ferias){
+        if(ferias.jaPodeTerFerias(ferias.getFuncionario())){
+            ferias.calcularValorDasFerias();
+            return feriasRepository.save(ferias);
+        }else{
+            return null;
+        }
     }
     
     public void delete(Long id){
