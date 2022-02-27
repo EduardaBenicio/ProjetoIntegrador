@@ -1,7 +1,6 @@
 package br.com.aula.CRUDCliente.controller;
 
 import br.com.aula.CRUDCliente.model.AjusteSalarial;
-import br.com.aula.CRUDCliente.model.Payment;
 import br.com.aula.CRUDCliente.sevices.AjusteSalarialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -54,6 +53,13 @@ public class AjusteSalarialController {
         }else{
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
+    }
+
+    @GetMapping(path = "ajustesById/{id}")
+    public ResponseEntity<List<AjusteSalarial>> findCargoById(@PathVariable Long id){
+
+        return ResponseEntity.status(HttpStatus.OK).body(ajusteSalarialService.findCargoById(id));
+
     }
 
     //DELETE CLIENT
