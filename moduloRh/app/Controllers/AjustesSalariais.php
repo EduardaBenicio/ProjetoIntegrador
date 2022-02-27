@@ -4,21 +4,27 @@ namespace App\Controllers;
 
 class AjustesSalariais extends BaseController
 {
-    public function index()
+    public function index($id)
     {
 
-
-        $url = "http://localhost:8080/api/cargo/all";
+        $url = "http://localhost:8080/api/cargo/$id";
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
         //Json para Array 
-        $view['cargos'] = json_decode(curl_exec($ch), true);
+        $view['cargo'] = json_decode(curl_exec($ch), true);
+        
+        $url = "http://localhost:8080/api/ajustes/ajustesById/$id";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-      //  print "<pre>";
-       // print_r($view['cargos']);
-       // die();
+        $view['ajuste'] = json_decode(curl_exec($ch), true);
+
+        //print "<pre>";
+        //print_r($view);
+        //die();
         return view('ajustes-salariais', $view);
     }
 

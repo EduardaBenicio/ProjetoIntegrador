@@ -52,4 +52,9 @@ public class AjusteSalarialService {
         cargoService.update(cargo);
         return ajusteSalarialRepository.save(ajusteSalarial);
     }
+
+    public List<AjusteSalarial>findCargoById(Long id){
+
+        return ajusteSalarialRepository.findCargoById(id);
+    }
 }

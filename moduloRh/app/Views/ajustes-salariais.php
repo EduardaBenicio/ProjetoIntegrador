@@ -8,9 +8,9 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Painel de ajustes salariais</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Painel de funcionários</li>
+                            <li class="breadcrumb-item active">ajustes salariais</li>
                         </ol>
-                        <a class="btn btn-primary" href="<?=site_url("ajustesSalariais/historico")?>" role="button">Histórico de Ajustes</a>
+                        <a class="btn btn-primary" href="<?=site_url("ajustesSalariais/registerAjuste/{$cargo['id']}")?>" role="button">Ajustar salário do cargo <?=$cargo['name']?></a>
                         
                         <div class="row">
                              
@@ -26,44 +26,49 @@
                                     <thead>
                                         <tr>
                                             <th>Cargo</th>
-                                            <th>Salário</th>
+                                            <th>Salário Antigo</th>
+                                            <th>Salário Atual</th>
                                             <th>Setor</th>
-                                            <th></th>
+                                            
                                            
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Cargo</th>
-                                            <th>Salário</th>
+                                            <th>Salário Antigo</th>
+                                            <th>Salário Atual</th>
                                             <th>Setor</th>
-                                            <th></th>
+                                            
                                          
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php if(isset($cargos)): ?>
-                                            <?php foreach($cargos as $key =>$item):?>
+                                        <?php if(isset($ajuste)): ?>
+                                            <?php foreach($ajuste as $key =>$item):?>
                                             <tr>
                                                 <th>
                                                     <a href="">
-                                                        <?=$item['name']?>
+                                                        <?=$item['cargo']['name']?>
                                                     </a>
                                                 </th>
                                                 <th>
                                                     <a href="">
-                                                        <?=$item['salario']?>
+                                                        <?=$item['salario_antigo']?>
                                                     </a>
                                                 </th>
                                                 <th>
                                                     <a href="">
-                                                        <?=$item['sector']['name']?>
+                                                        <?=$item['salario_novo']?>
+                                                    </a>
+                                                </th>
+                                                <th>
+                                                    <a href="">
+                                                        <?=$item['cargo']['sector']['name']?>
                                                     </a>
                                                 </th>
                                                  <!--EDIT-->
-                                                 <th >
-                                                    <a class="btn btn-primary" href="<?=site_url("ajustesSalariais/registerAjuste/{$item['id']}")?>" role="button">Registrar Ajuste</a>
-                                                </th>
+                                                
                                             </tr>
                                             <?php endforeach;?>
                                         <?php endif;?>
