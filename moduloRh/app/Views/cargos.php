@@ -81,7 +81,7 @@
                                                 </th>
                                                 <th>
                                                     <a href="">
-                                                        <?=$item['salario']?>
+                                                        <?="R$".number_format($item['salario'], 2)?>
                                                     </a>
                                                 </th>
                                                 <th>

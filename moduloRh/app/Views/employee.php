@@ -65,7 +65,7 @@
                                                         <th><?=$item['cargo']['sector']['name']?></th>
                                                         <th><?=$item['dataNasc']?></th>
                                                         <th><?=$item['dataIngresso']?></th>
-                                                        <th>R$<?=$item['cargo']['salario'] .",00"?></th>
+                                                        <th>R$<?=number_format($item['cargo']['salario'], 2)?></th>
                                                          <!--EDIT-->
                                                         <th >
                                                         <a href="<?=site_url("Funcionarios/registerEmployee/{$item['id']}")?>">

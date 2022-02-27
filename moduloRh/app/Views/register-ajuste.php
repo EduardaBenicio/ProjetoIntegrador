@@ -24,7 +24,7 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário:</b></h8>
-                                <h10> <?= $cargo['salario'] ?>,00</h10>
+                                <h10> <?= number_format($cargo['salario'], 2)?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Setor:</b></h8>

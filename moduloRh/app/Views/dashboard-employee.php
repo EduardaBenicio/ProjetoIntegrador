@@ -110,7 +110,7 @@
 
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário:</b></h8>
-                                <h10> R$<?= $funcionario['cargo']['salario'] . ',00' ?></h10>
+                                <h10> R$<?= number_format($funcionario['cargo']['salario'], 2)?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Dia de Pagamento:</b></h8>
@@ -118,11 +118,11 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Valor Devido:</b></h8>
-                                <h10> R$<?= $funcionario['valorDevidoAtual']. ',00' ?></h10>
+                                <h10> R$<?= number_format($funcionario['valorDevidoAtual'], 2) ?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                             <h8><b>Valor do desconto do INSS:</b></h8>
-                                <h10> R$<?= $funcionario['inss']?></h10>
+                                <h10> R$<?= number_format($funcionario['inss'], 2)?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Data do Ultimo Pagamento:</b></h8>
@@ -130,7 +130,7 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Décimo Terceiro:</b></h8>
-                                <h10> <?= $funcionario['decimoTerceiro'] ?></h10>
+                                <h10> <?= number_format($funcionario['decimoTerceiro'], 2)?></h10>
                             </div>
                             
                         
