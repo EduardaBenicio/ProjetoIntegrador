@@ -18,6 +18,26 @@ class FeriasController extends BaseController
         //die();
         return view('ferias', $view);   
     }
+    public function indexDeUnicoFuncionario($id = null){
+        if(isset($id)){
+            $url = "http://localhost:8080/api/ferias/funcionario/{$id}";
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+            //Json para Array 
+            $view['ferias'] = json_decode(curl_exec($ch), true);
+
+            //Dados do Back para serem enviados para View
+            //$res['funcionarios'] = $clientes;
+            //$res['dados'] = "";
+            $view['funcionario'] = $id;
+        }
+        //print_r($res);
+        //die();
+
+        return view('ferias-funcionario',$view);
+    }
     public function saveFerias($id = null){
         if(!isset($id)){
             $url = "http://localhost:8080/api/clientes";
@@ -32,20 +52,17 @@ class FeriasController extends BaseController
             $res['funcionarios'] = $clientes;
             $res['dados'] = "";
         }else{
-            $url = "http://localhost:8080/api/ferias/{$id}";
+            $url = "http://localhost:8080/api/cliente/{$id}";
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-            //Json para Array 
             $funcionario = json_decode(curl_exec($ch), true);
-            //Dados do Back para serem enviados para View
 
-            //$funcionario['inicio_das_ferias'] = date('d/m/Y', strtotime($funcionario['inicio_das_ferias']));
-            //$funcionario['fim_das_ferias'] = date("Y-d-m", strtotime($funcionario['fim_das_ferias']));
-            
+            //Dados do Back para serem enviados para View
+            //$res['funcionarios'] = $clientes;
             $res['dados'] = $funcionario;
-            
+            //print_r($res);
+            //die();
         }
         
         return view('register-ferias', $res);
@@ -92,7 +109,7 @@ class FeriasController extends BaseController
         );
         //Json para Array 
         $resultado = json_decode(curl_exec($ch), true);
-        return redirect()->to(site_url("FeriasController/index"));
+        return redirect()->to(site_url("FeriasController/indexDeUnicoFuncionario/{$idUser}"));
     }
 
 
@@ -140,7 +157,7 @@ class FeriasController extends BaseController
 
 
 
-    public function deleteFerias($id){
+    public function deleteFerias($id,$idUser = null){
         $url = "http://localhost:8080/api/ferias/delete/{$id}";
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -148,7 +165,9 @@ class FeriasController extends BaseController
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);      
         //Json para Array 
         $resultado = json_decode(curl_exec($ch), true);
-
-        return redirect()->to(site_url("FeriasController/index"));
+        if($idUser == null){
+            return redirect()->to(site_url("FeriasController/index"));
+        }
+        return redirect()->to(site_url("FeriasController/indexDeUnicoFuncionario/{$idUser}"));
     }
 }

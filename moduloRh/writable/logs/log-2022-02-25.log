@@ -1,0 +1,21 @@
+CRITICAL - 2022-02-25 15:57:09 --> Undefined array key "name"
+#0 C:\php\htdocs\moduloRh\app\Controllers\Home.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 44)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Home->logar()
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-25 15:57:37 --> Undefined array key "name"
+#0 C:\php\htdocs\moduloRh\app\Controllers\Home.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 44)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Home->logar()
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-25 15:57:53 --> Undefined array key "name"
+#0 C:\php\htdocs\moduloRh\app\Controllers\Home.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 44)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Home->logar()
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

@@ -34,7 +34,7 @@ use App\Controllers\Home;
 
     <div id="layoutSidenav_content">
         <?php if(isset($dados['id'])): ?>
-            <form action="<?= site_url("FeriasController/salvarEditFerias/{$dados['id']}") ?>" method="post" class="form-horizontal">
+            <form action="<?= site_url("FeriasController/salvarFerias/{$dados['id']}") ?>" method="post" class="form-horizontal">
         <?php else:?>
             <form action="<?= site_url("FeriasController/salvarFerias") ?>" method="post" class="form-horizontal">
         <?php endif;?>
@@ -52,8 +52,11 @@ use App\Controllers\Home;
                         </div>
                         <div class="form-group">
                             <div class="col-md-1 control-label">
+                            <?php if(isset($dados['id'])): ?>
+                                <a href="<?= site_url("FeriasController/indexDeUnicoFuncionario/{$dados['id']}") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
+                             <?php else:?>
                                 <a href="<?= site_url("FeriasController/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
-
+                            <?php endif;?>
                             </div>
                             <div class="col-md-4 control-label">
 
@@ -67,21 +70,21 @@ use App\Controllers\Home;
                                     <label class="col-md-2 control-label" for="ferias">Nome <h11>*</h11></label>
                                     <div class="col-md-2">
                                         <select required id="id" name="id" class="form-control">
-                                                <option value="<?=_v($dados['funcionario'],'id')?>"><?=_v($dados['funcionario'],'name')?></option>
+                                                <option value="<?=_v($dados,'id')?>"><?=_v($dados,'name')?></option>
                                         </select>
                                     </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="data">Inicio das Férias<h11>*</h11></label>
                                     <div class="col-md-2">
-                                        <input id="inicio_das_ferias" name="inicio_das_ferias" value="<?=$dados["inicio_das_ferias"]?>" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                        <input id="inicio_das_ferias" name="inicio_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                 </div>
                             </div>
                             
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="data">Fim das Férias<h11>*</h11></label>
                                     <div class="col-md-2">
-                                        <input id="fim_das_ferias" name="fim_das_ferias" value="<?=$dados["fim_das_ferias"]?>" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                        <input id="fim_das_ferias" name="fim_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                 </div>
                             </div>
 
@@ -90,7 +93,7 @@ use App\Controllers\Home;
 
                         <?php else:?>
                             <div class="form-group">
-                                    <label class="col-md-2 control-label" for="sector">Nome <h11>*</h11></label>
+                                    <label class="col-md-2 control-label" for="funcionario">Nome <h11>*</h11></label>
                                     <div class="col-md-2">
                                         <select required id="id" name="id" class="form-control">
                                         <option value=""></option>

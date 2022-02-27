@@ -1,0 +1,190 @@
+CRITICAL - 2022-02-26 20:55:05 --> Undefined variable $res
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\php\\htdocs\\m...', 35)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario('3')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 21:09:39 --> Undefined variable $funcionario
+#0 C:\php\htdocs\moduloRh\app\Views\ferias-funcionario.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\php\\htdocs\\m...', 20)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('ferias-funciona...', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(38): view('ferias-funciona...', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:10:28 --> Undefined variable $funcionario
+#0 C:\php\htdocs\moduloRh\app\Views\ferias-funcionario.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\php\\htdocs\\m...', 20)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('ferias-funciona...', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(38): view('ferias-funciona...', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:14:29 --> Cannot access offset of type string on string
+#0 C:\php\htdocs\moduloRh\system\View\View.php(210): include()
+#1 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('ferias-funciona...', Array, true)
+#3 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(39): view('ferias-funciona...', Array)
+#4 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario('3')
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-26 21:21:02 --> Trying to access array offset on value of type int
+#0 C:\php\htdocs\moduloRh\app\Views\register-ferias.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\php\\htdocs\\m...', 99)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ferias', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(65): view('register-ferias', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->saveFerias('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:22:53 --> Trying to access array offset on value of type int
+#0 C:\php\htdocs\moduloRh\app\Views\register-ferias.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\php\\htdocs\\m...', 99)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ferias', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(66): view('register-ferias', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->saveFerias('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:24:39 --> Trying to access array offset on value of type int
+#0 C:\php\htdocs\moduloRh\app\Views\register-ferias.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\php\\htdocs\\m...', 99)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ferias', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(66): view('register-ferias', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->saveFerias('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:29:18 --> Undefined array key "funcionario"
+#0 C:\php\htdocs\moduloRh\app\Views\register-ferias.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 70)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ferias', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(66): view('register-ferias', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->saveFerias('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:29:21 --> Undefined array key "funcionario"
+#0 C:\php\htdocs\moduloRh\app\Views\register-ferias.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 70)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ferias', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(66): view('register-ferias', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->saveFerias('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:29:22 --> Undefined array key "funcionario"
+#0 C:\php\htdocs\moduloRh\app\Views\register-ferias.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 70)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ferias', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(66): view('register-ferias', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->saveFerias('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:29:39 --> Undefined array key "funcionario"
+#0 C:\php\htdocs\moduloRh\app\Views\register-ferias.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 70)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ferias', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(66): view('register-ferias', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->saveFerias('3')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:35:24 --> Undefined array key "inicio_das_ferias"
+#0 C:\php\htdocs\moduloRh\app\Views\register-ferias.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 77)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('register-ferias', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(68): view('register-ferias', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->saveFerias('2')
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-26 21:36:43 --> Trying to access array offset on value of type null
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\php\\htdocs\\m...', 127)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->salvarEditFerias('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 21:37:35 --> Undefined array key "id"
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 75)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->salvarFerias('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 21:43:01 --> Undefined array key "id"
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 75)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->salvarFerias('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 21:43:58 --> Undefined array key "id"
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 75)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->salvarFerias('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 21:44:12 --> Undefined array key "id"
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 75)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->salvarFerias('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 21:45:40 --> Undefined array key "id"
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 75)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->salvarFerias('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 22:43:31 --> Undefined variable $view
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\php\\htdocs\\m...', 39)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario()
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 22:45:18 --> Undefined variable $view
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\php\\htdocs\\m...', 39)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario()
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-26 22:47:21 --> Undefined variable $view
+#0 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\php\\htdocs\\m...', 39)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario()
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

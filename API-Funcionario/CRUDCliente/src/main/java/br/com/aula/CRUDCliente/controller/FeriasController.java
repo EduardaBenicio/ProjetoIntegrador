@@ -65,5 +65,9 @@ public class FeriasController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Férias Não existe!");
         }
     }
+    @GetMapping(path = "/funcionario/{id}")
+    public ResponseEntity<List<Ferias>> buscaFeriasPorIdFuncionario(@PathVariable Long id){
+        return ResponseEntity.status(HttpStatus.OK).body(feriasService.buscaFeriasPorIdFuncionario(id));
+    }
 
 }

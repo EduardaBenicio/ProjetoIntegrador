@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-xl-2 col-md-6">
                         <div class="card bg-primary text-white mb-4">
-                            <a class="btn btn-primary" href="<?= site_url("funcionarios/registerEmployee") ?>" role="button">Registrar férias</a>
+                            <a class="btn btn-primary" href="<?= site_url("FeriasController/indexDeUnicoFuncionario/{$funcionario['id']}") ?>" role="button">Registrar férias</a>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6  ">
@@ -132,6 +132,7 @@
                                 <h8><b>Décimo Terceiro:</b></h8>
                                 <h10> <?= $funcionario['decimoTerceiro'] ?></h10>
                             </div>
+                            
                         
                         </div>
                     </div>

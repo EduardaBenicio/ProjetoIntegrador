@@ -17,7 +17,7 @@
                 
                     <div class="container-fluid px-4">
                         
-                        <a class="btn btn-primary" href="<?=site_url("FeriasController/saveFerias")?>" role="button">Cadastrar Férias</a>
+                        <a class="btn btn-primary" href="<?=site_url("FeriasController/saveFerias/{$funcionario}")?>" role="button">Cadastrar Férias</a>
                         
                         <div class="row">
                              
@@ -35,7 +35,7 @@
                                             <th>Funcionario</th>
                                             <th>Inicio das Férias</th>
                                             <th>Fim das Férias</th>
-                                            <th>Valor Pago</th>   
+                                            <th>Valor Pago</th>
                                             <th>Deletar</th>
                                         </tr>
                                     </thead>
@@ -74,7 +74,8 @@
                                                 </th>
                                                 <!--DELETE-->
                                                 <th>
-                                                    <a href="<?=site_url("FeriasController/deleteFerias/{$item['id']}")?>" onclick='return confirmDeleteCargo();'>
+                                                    
+                                                    <a href="<?=site_url("FeriasController/deleteFerias/{$item['id']}/{$funcionario}")?>" onclick='return confirmDeleteCargo();'>
                                                         <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                                             <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 
                                                                 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59

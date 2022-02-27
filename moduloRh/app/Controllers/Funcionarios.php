@@ -185,8 +185,7 @@ class Funcionarios extends BaseController
         $funcionario = json_decode(curl_exec($ch), true);
 
         $res['funcionario'] = $funcionario;
-
-
+        
         return view('dashboard-employee', $res);
     }
 

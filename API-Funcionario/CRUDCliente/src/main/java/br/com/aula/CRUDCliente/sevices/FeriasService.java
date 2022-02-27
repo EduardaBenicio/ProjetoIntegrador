@@ -47,4 +47,8 @@ public class FeriasService {
     public void delete(Long id){
         feriasRepository.deleteById(id);
     }
+    public List<Ferias> buscaFeriasPorIdFuncionario(Long id){
+        return feriasRepository.buscaFeriasPorCliente(id);
+    }
+    
 }
