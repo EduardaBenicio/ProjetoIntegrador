@@ -69,7 +69,7 @@
                                                 </th>
                                                 <th>
                                                     <a href="">
-                                                        <?=$item['valor_pago_ferias']?>
+                                                    R$<?=number_format($item['valor_pago_ferias'], 2,",", ".")?>
                                                     </a>
                                                 </th>
                                                 <!--DELETE-->
