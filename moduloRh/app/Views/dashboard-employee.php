@@ -134,7 +134,7 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Décimo Terceiro:</b></h8>
-                                <h10> <?= number_format($funcionario['decimoTerceiro'], 2)?></h10>
+                                <h10> R$<?= number_format($funcionario['decimoTerceiro'], 2)?></h10>
                             </div>
                             <?php if(isset($diasIngressado)):?>
                                 <div class="col-xl-9 col-md-6">

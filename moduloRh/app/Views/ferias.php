@@ -6,22 +6,9 @@
                 
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Painel de Ferias</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Painel</li>
-                        </ol>
-                        <div class="row">
                         
-                          
-                         
-                        </div>
                 
                     <div class="container-fluid px-4">
-                        
-                        <a class="btn btn-primary" href="<?=site_url("FeriasController/saveFerias")?>" role="button">Cadastrar Férias</a>
-                        
-                        <div class="row">
-                             
-                        </div>
                         <br>
                         <div class="card mb-4">
                             <div class="card-header">
@@ -69,7 +56,7 @@
                                                 </th>
                                                 <th>
                                                     <a href="">
-                                                        R$ <?=number_format($item['valor_pago_ferias'])?>
+                                                        R$ <?=number_format($item['valor_pago_ferias'], 2,",", ".")?>
                                                     </a>
                                                 </th>
                                                 <!--DELETE-->
