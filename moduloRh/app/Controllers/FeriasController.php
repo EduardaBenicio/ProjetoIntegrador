@@ -28,6 +28,18 @@ class FeriasController extends BaseController
             //Json para Array 
             $view['ferias'] = json_decode(curl_exec($ch), true);
 
+            //verificar funcionario existe
+            $url2 = "http://localhost:8080/api/cliente/{$id}";
+            $ch2 = curl_init($url2);
+            curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch2, CURLOPT_SSL_VERIFYPEER, false);
+
+            //Json para Array 
+            $funcionario = json_decode(curl_exec($ch2), true);
+
+            if($funcionario == null){
+                return view('ferias-404');
+            }
             //Dados do Back para serem enviados para View
             //$res['funcionarios'] = $clientes;
             //$res['dados'] = "";
@@ -40,29 +52,19 @@ class FeriasController extends BaseController
     }
     public function saveFerias($id = null){
         if(!isset($id)){
-            $url = "http://localhost:8080/api/clientes";
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-            //Json para Array 
-            $clientes = json_decode(curl_exec($ch), true);
-
-            //Dados do Back para serem enviados para View
-            $res['funcionarios'] = $clientes;
-            $res['dados'] = "";
+            return view('ferias-404');
         }else{
             $url = "http://localhost:8080/api/cliente/{$id}";
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             $funcionario = json_decode(curl_exec($ch), true);
+            //Caso funcionario não existir
+            if($funcionario == null){
+                return view('ferias-404');
+            }
 
-            //Dados do Back para serem enviados para View
-            //$res['funcionarios'] = $clientes;
             $res['dados'] = $funcionario;
-            //print_r($res);
-            //die();
         }
         
         return view('register-ferias', $res);
@@ -71,7 +73,20 @@ class FeriasController extends BaseController
         $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
         $post['inicio_das_ferias'] = date('d/m/Y', strtotime($post['inicio_das_ferias']));
         $post['fim_das_ferias'] = date('d/m/Y', strtotime($post['fim_das_ferias']));
-
+        
+        //Juinin gambiarras
+        $inicio = explode('/',$post['inicio_das_ferias']);
+        $fim = explode('/',$post['fim_das_ferias']);
+            //colocando no padrão americano
+        $dataInicio = strtotime("$inicio[2]-$inicio[1]-$inicio[0]");
+        $dataFinal = strtotime("$fim[2]-$fim[1]-$fim[0]");
+            //Calcula a quantidade de dias
+        $dias = ($dataFinal - $dataInicio)/86400 +1;
+            //Se o total de dia for menor que 1 retorna erro
+            if($dias < 1){
+                $this->session->setFlashdata('erro', 'Data de inicio tem que ser antes da data final.');
+                return redirect()->to(site_url("FeriasController/saveFerias/{$post["id"]}"));
+            }
         $idUser = (int) $post["id"];
         $url = "http://localhost:8080/api/cliente/{$idUser}";
         $ch = curl_init($url);
@@ -109,6 +124,7 @@ class FeriasController extends BaseController
         );
         //Json para Array 
         $resultado = json_decode(curl_exec($ch), true);
+        $this->session->setFlashdata('success', 'Cadastrado com sucesso!.');
         return redirect()->to(site_url("FeriasController/indexDeUnicoFuncionario/{$idUser}"));
     }
 

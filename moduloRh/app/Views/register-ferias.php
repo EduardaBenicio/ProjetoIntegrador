@@ -62,11 +62,15 @@ use App\Controllers\Home;
 
                                 <h3>Dados das Ferias</h3>
                             </div>
+                            
                         </div>
                         
                         <!-- Text input-->
                         <?php if(isset($dados['id'])): ?>
                             <div class="form-group">
+                                <div>
+                                    <p id="erro" name="erro" style="color:red;margin-left: 15%;"><?=session("erro");?> </p>
+                                </div>
                                     <label class="col-md-2 control-label" for="ferias">Nome <h11>*</h11></label>
                                     <div class="col-md-2">
                                         <select required id="id" name="id" class="form-control">
@@ -129,12 +133,12 @@ use App\Controllers\Home;
                             <label class="col-md-2 control-label" for="Cadastrar"></label>
                             <?php if(isset($setor)): ?>
                                 <div class="col-md-8">
-                                    <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertCargoAdd();'>Cadastrar</button>
+                                    <button id="registrar" class="btn btn-success" type="Submit">Cadastrar</button>
                                     <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                 </div>
                             <?php else:?>
                                 <div class="col-md-8">
-                                    <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertCargoAtt();'>Cadastrar</button>
+                                    <button id="registrar" class="btn btn-success" type="Submit">Cadastrar</button>
                                     <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                 </div>
                             <?php endif;?>

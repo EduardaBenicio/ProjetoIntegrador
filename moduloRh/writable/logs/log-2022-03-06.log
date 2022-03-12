@@ -1,0 +1,14 @@
+CRITICAL - 2022-03-06 14:57:32 --> Undefined array key 2
+#0 C:\php\htdocs\moduloRh\app\Controllers\Funcionarios.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 200)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->dashboardEmployee('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-06 17:43:58 --> Undefined array key 2
+#0 C:\php\htdocs\moduloRh\app\Controllers\Funcionarios.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 200)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->dashboardEmployee('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

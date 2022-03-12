@@ -1,56 +1,43 @@
 <?php if (isset($_SESSION["user"]["name"])) : ?>
     <?php include 'masterhead.php'; ?>
 
-    <div id="layoutSidenav_content">
-        <main>
-
-            <div class="container-fluid px-4">
-                <h1 class="mt-4">Painel de Ferias</h1>
-                <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item active">Painel</li>
-                </ol>
-                <div class="row">
-
-
-
-                </div>
-
-                <div class="container-fluid px-4">
-
-                    <a id="saveFerias" name="saveFerias" class="btn btn-primary" href="<?= site_url("FeriasController/saveFerias") ?>" role="button">Cadastrar Férias</a>
-
-                    <div class="row">
-
-                    </div>
-                    <br>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Tabela de Ferias
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple">
-                                <thead>
-                                    <tr>
-                                        <th>Funcionario</th>
-                                        <th>Inicio das Férias</th>
-                                        <th>Fim das Férias</th>
-                                        <th>Valor Pago</th>
-                                        <th>Deletar</th>
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th>Funcionario</th>
-                                        <th>Inicio das Férias</th>
-                                        <th>Fim das Férias</th>
-                                        <th>Valor Pago</th>
-                                        <th>Deletar</th>
-                                    </tr>
-                                </tfoot>
-                                <tbody>
-                                    <?php if (isset($ferias)) : ?>
-                                        <?php foreach ($ferias as $key => $item) : ?>
+            <div id="layoutSidenav_content">
+                <main>
+                
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Painel de Ferias</h1>
+                        
+                
+                    <div class="container-fluid px-4">
+                        <br>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Tabela de Ferias
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Funcionario</th>
+                                            <th>Inicio das Férias</th>
+                                            <th>Fim das Férias</th>
+                                            <th>Valor Pago</th>   
+                                            <th>Deletar</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Funcionario</th>
+                                            <th>Inicio das Férias</th>
+                                            <th>Fim das Férias</th>
+                                            <th>Valor Pago</th>
+                                            <th>Deletar</th> 
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <?php if(isset($ferias)): ?>
+                                            <?php foreach($ferias as $key =>$item):?>
                                             <tr>
                                                 <th id="funcName" name="funcName">
 
@@ -67,10 +54,10 @@
                                                     <?= $item['fim_das_ferias'] ?>
 
                                                 </th>
-                                                <th id="valor_pago_ferias" name="valor_pago_ferias">
-
-                                                    <?= $item['valor_pago_ferias'] ?>
-
+                                                <th>
+                                                    <a id="valor_pago_ferias" name="valor_pago_ferias"href="">
+                                                        R$ <?=number_format($item['valor_pago_ferias'], 2,",", ".")?>
+                                                    </a>
                                                 </th>
                                                 <!--DELETE-->
                                                 <th>

@@ -1,0 +1,59 @@
+CRITICAL - 2022-03-11 00:05:07 --> Cannot access offset of type string on string
+#0 C:\php\htdocs\moduloRh\system\View\View.php(210): include()
+#1 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('ferias-funciona...', Array, true)
+#3 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(42): view('ferias-funciona...', Array)
+#4 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario('assets', 'img', 'error-404-monoc...')
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-11 00:05:17 --> Cannot access offset of type string on string
+#0 C:\php\htdocs\moduloRh\system\View\View.php(210): include()
+#1 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('ferias-funciona...', Array, true)
+#3 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(42): view('ferias-funciona...', Array)
+#4 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario('index.html')
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-11 00:12:22 --> Cannot access offset of type string on string
+#0 C:\php\htdocs\moduloRh\system\View\View.php(210): include()
+#1 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('ferias-funciona...', Array, true)
+#3 C:\php\htdocs\moduloRh\app\Controllers\FeriasController.php(42): view('ferias-funciona...', Array)
+#4 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\FeriasController->indexDeUnicoFuncionario('assets', 'img', 'error-404-monoc...')
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeriasController))
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-11 02:28:54 --> Trying to access array offset on value of type null
+#0 C:\php\htdocs\moduloRh\app\Controllers\Funcionarios.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\php\\htdocs\\m...', 190)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->dashboardEmployee('5')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 03:15:46 --> foreach() argument must be of type array|object, null given
+#0 C:\php\htdocs\moduloRh\app\Views\employee.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\php\\htdocs\\m...', 58)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('employee', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\Funcionarios.php(20): view('employee', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->index()
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-11 03:16:14 --> foreach() argument must be of type array|object, null given
+#0 C:\php\htdocs\moduloRh\app\Views\employee.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\php\\htdocs\\m...', 58)
+#1 C:\php\htdocs\moduloRh\system\View\View.php(210): include('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\php\htdocs\moduloRh\system\Common.php(1089): CodeIgniter\View\View->render('employee', Array, true)
+#4 C:\php\htdocs\moduloRh\app\Controllers\Funcionarios.php(20): view('employee', Array)
+#5 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->index()
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#7 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

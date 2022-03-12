@@ -23,11 +23,21 @@
 
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="col-xl-2 col-md-6">
                         <div class="card bg-primary text-white mb-4">
                             <a id="registrarFerias" name="registrarFerias" class="btn btn-primary" href="<?= site_url("FeriasController/indexDeUnicoFuncionario/{$funcionario['id']}") ?>" role="button">Registrar férias</a>
+=======
+                    <?php if(isset($diasIngressado)):?>
+                        <?php if($diasIngressado >= 365):?>
+                        <div class="col-xl-2 col-md-6">
+                            <div class="card bg-primary text-white mb-4">
+                                <a class="btn btn-primary" href="<?= site_url("FeriasController/indexDeUnicoFuncionario/{$funcionario['id']}") ?>" role="button">Registrar férias</a>
+                            </div>
+>>>>>>> 7f4e14dfeb719dfb74653534812926eb8c6d4ed5
                         </div>
-                    </div>
+                        <?php endif;?>
+                    <?php endif;?>
                     <div class="col-xl-3 col-md-6  ">
                         <div class="card bg-primary text-white mb-4">
                             <a id="registrarPromocao" name="registrarPromocao" class="btn btn-primary" href="<?= site_url("funcionarios/promocao/{$funcionario['id']}") ?>" role="button">Registrar promoção</a>
@@ -130,8 +140,20 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Décimo Terceiro:</b></h8>
-                                <h10 id="decimoTerceiro" name="decimoTerceiro"> <?= number_format($funcionario['decimoTerceiro'], 2)?></h10>
+                                <h10 id="decimoTerceiro" name="decimoTerceiro"> R$<?= number_format($funcionario['decimoTerceiro'], 2)?></h10>
                             </div>
+                            <?php if(isset($diasIngressado)):?>
+                                <div class="col-xl-9 col-md-6">
+                                    <h8><b>Total de dias na empresa:</b></h8>
+                                    <h10> <?= $diasIngressado ?> dias</h10>
+                                </div>
+                            <?php endif;?>
+                            <?php if(isset($diasIngressadoNoCargo)):?>
+                                <div class="col-xl-9 col-md-6">
+                                    <h8><b>Total de dias no Cargo:</b></h8>
+                                    <h10> <?= $diasIngressadoNoCargo ?> dias</h10>
+                                </div>
+                            <?php endif;?>
                             
                         
                         </div>
