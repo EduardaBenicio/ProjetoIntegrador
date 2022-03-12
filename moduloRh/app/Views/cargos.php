@@ -95,7 +95,7 @@
                                                     </a>
                                                 </th>
                                                 <th>
-                                                    <a href="<?=site_url("ajustesSalariais/index/{$item['id']}")?>">
+                                                    <a  id="ajuste" name="ajuste" href="<?=site_url("ajustesSalariais/index/{$item['id']}")?>">
                                                         <svg class="edit_cash" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-coin" viewBox="0 0 16 16">
                                                         <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z"/>
                                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -105,7 +105,7 @@
                                                 </th>
                                                  <!--EDIT-->
                                                 <th >
-                                                <a href="<?=site_url("CargoController/editCargo/{$item['id']}")?>">
+                                                <a id="editar" name="editar"  href="<?=site_url("CargoController/editCargo/{$item['id']}")?>">
                                                     <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                                         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5
                                                         0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -116,7 +116,7 @@
                                                 </th>
                                                 <!--DELETE-->
                                                 <th>
-                                                    <a href="<?=site_url("CargoController/deleteCargo/{$item['id']}")?>" onclick='return confirmDeleteCargo();'>
+                                                    <a id="deletar" name="deletar" href="<?=site_url("CargoController/deleteCargo/{$item['id']}")?>" onclick='return confirmDeleteCargo();'>
                                                         <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                                             <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 
                                                                 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59

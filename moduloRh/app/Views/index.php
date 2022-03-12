@@ -11,11 +11,11 @@
                         
                        
                         <div class="row">
-                            <div class="col-xl-3 col-md-6">
+                            <div  class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Funcionários</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="<?=site_url("funcionarios/index")?>">Ver detalhes</a>
+                                        <a id="botaoFuncionario" name="botaoFuncionario" class="small text-white stretched-link" href="<?=site_url("funcionarios/index")?>">Ver detalhes</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -25,7 +25,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Histórico de Pagamentos</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="<?=site_url("pagamentos/index")?>">Ver detalhes</a>
+                                        <a id="botaoPagamentos" name="botaoPagamentos" class="small text-white stretched-link" href="<?=site_url("pagamentos/index")?>">Ver detalhes</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -34,7 +34,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Setores</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="<?=site_url("SetorController/index")?>">Ver detalhes</a>
+                                        <a id="botaoSetores" name="botaoSetores" class="small text-white stretched-link" href="<?=site_url("SetorController/index")?>">Ver detalhes</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Cargos</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="<?=site_url("CargoController/index")?>">Ver detalhes</a>
+                                        <a id="botaoCargos" name="botaoCargos" class="small text-white stretched-link" href="<?=site_url("CargoController/index")?>">Ver detalhes</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

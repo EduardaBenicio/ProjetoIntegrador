@@ -77,14 +77,14 @@ use App\Controllers\Home;
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="data">Inicio das Férias<h11>*</h11></label>
                                     <div class="col-md-2">
-                                        <input id="inicio_das_ferias" name="inicio_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                        <input id="inicio_das_ferias" id="inicio_das_ferias" name="inicio_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                 </div>
                             </div>
                             
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="data">Fim das Férias<h11>*</h11></label>
                                     <div class="col-md-2">
-                                        <input id="fim_das_ferias" name="fim_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                        <input id="fim_das_ferias" id="fim_das_ferias" name="fim_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                 </div>
                             </div>
 
@@ -110,14 +110,14 @@ use App\Controllers\Home;
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="name">Inicio das Férias<h11>*</h11></label>
                                 <div class="col-md-2">
-                                <input id="inicio_das_ferias" name="inicio_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                <input id="inicio_das_ferias" id="inicio_das_ferias" name="inicio_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="name">Fim das Férias<h11>*</h11></label>
                                 <div class="col-md-2">
-                                <input id="fim_das_ferias" name="fim_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                <input id="fim_das_ferias" id="fim_das_ferias" name="fim_das_ferias" value="" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                 </div>
                             </div>       
                         <?php endif;?>
@@ -129,12 +129,12 @@ use App\Controllers\Home;
                             <label class="col-md-2 control-label" for="Cadastrar"></label>
                             <?php if(isset($setor)): ?>
                                 <div class="col-md-8">
-                                    <button class="btn btn-success" type="Submit" onclick='return alertCargoAdd();'>Cadastrar</button>
+                                    <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertCargoAdd();'>Cadastrar</button>
                                     <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                 </div>
                             <?php else:?>
                                 <div class="col-md-8">
-                                    <button class="btn btn-success" type="Submit" onclick='return alertCargoAtt();'>Cadastrar</button>
+                                    <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertCargoAtt();'>Cadastrar</button>
                                     <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                 </div>
                             <?php endif;?>

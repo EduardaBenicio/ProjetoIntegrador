@@ -37,10 +37,10 @@
                                     <tbody>
                                          <?php foreach($pagamentos as $key =>$item):?>
                                             <tr>
-                                                <th><?=$item['funcionario']['name']?></th>
-                                                <th><?=$item['funcionario']['cargo']['name']?></th>
-                                                <th><?=$item['date_payment']?></th>
-                                                <th>R$<?=$item['value_paid'] .',00'?></th>
+                                                <th id="funcionarioName" name="funcionarioName"><?=$item['funcionario']['name']?></th>
+                                                <th id="cargoName" name="cargoName"><?=$item['funcionario']['cargo']['name']?></th>
+                                                <th id="dataPag" name="dataPag"><?=$item['date_payment']?></th>
+                                                <th id="valorPago" name="valorPago">R$<?=$item['value_paid'] .',00'?></th>
                                                 
                                             </tr>
                                         <?php endforeach;?>

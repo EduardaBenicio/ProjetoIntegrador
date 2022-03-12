@@ -12,7 +12,7 @@
 
             <?php if(isset($ajuste['date_change'])):?>
                 <?php if(isset($alert)):?>
-                    <div class="alert alert-success alert-dismissible" role="alert">
+                    <div id="sucesso" name="sucesso" class="alert alert-success alert-dismissible" role="alert">
                         Ajuste Salarial realizado com sucesso!
                     </div>
                 <?php endif;?>
@@ -24,20 +24,20 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Cargo:</b></h8>
-                                <h10> <?= $ajuste['cargo']['name'] ?></h10>
+                                <h10 id="name" name="name"> <?= $ajuste['cargo']['name'] ?></h10>
 
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário Antigo:</b></h8>
-                                <h10> <?= $ajuste['salario_antigo'] ?>,00</h10>
+                                <h10 id="salarioAntigo" name="salarioAntigo"> <?= $ajuste['salario_antigo'] ?>,00</h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salario Novo:</b></h8>
-                                <h10> <?= $ajuste['salario_novo']  ?>,00</h10>
+                                <h10 id="salarioNovo" name="salarioNovo"> <?= $ajuste['salario_novo']  ?>,00</h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Data da mudança:</b></h8>
-                                <h10> <?= $ajuste['date_change']  ?></h10>
+                                <h10 id="dataMudanca" name="dataMudanca"> <?= $ajuste['date_change']  ?></h10>
                             </div>
 
                         </div>

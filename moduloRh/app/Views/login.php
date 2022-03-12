@@ -28,20 +28,20 @@
                                     <form method="post" action='<?=site_url("home/logar")?>' >
                                         <div class="form-group">
                                             <label class="col-md-2 control-label" for="user">Usuário:</label>
-                                            <input name="user" type="text" class="form-control" id="user" placeholder="Insira seu usuário">
+                                            <input id="user" name="user" type="text" class="form-control" id="user" placeholder="Insira seu usuário">
                                             
                                         </div>
                                         </br>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label" for="password">Senha:</label>
-                                            <input type="password" name="password" class="form-control" id="password" placeholder="Insira sua senha">
+                                            <input id="password" type="password" name="password" class="form-control" id="password" placeholder="Insira sua senha">
                                         </div>
-                                        <div class="text-center form-group col-md-6">
+                                        <div id="erro" class="text-center form-group col-md-6">
                                                 <?=session("erro");?>
                                         </div>
                                         </br>
                                         <div class="text-center form-group">
-                                            <button type="submit" class="btn btn-primary col-md-3 col-xl-3 ">Login</button>
+                                            <button id="botao" type="submit" class="btn btn-primary col-md-3 col-xl-3 ">Login</button>
                                         </div>
 
                                     </form>

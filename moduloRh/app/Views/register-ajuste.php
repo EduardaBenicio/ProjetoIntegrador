@@ -19,16 +19,16 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Nome:</b></h8>
-                                <h10> <?= $cargo['name'] ?></h10>
+                                <h10 id= "nomeCargo"> <?= $cargo['name'] ?></h10>
 
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário:</b></h8>
-                                <h10> <?= number_format($cargo['salario'], 2)?></h10>
+                                <h10 id= "salarioAtual"> <?= number_format($cargo['salario'], 2)?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Setor:</b></h8>
-                                <h10> <?= $cargo['sector']['name'] ?></h10>
+                                <h10 id= "setor"> <?= $cargo['sector']['name'] ?></h10>
                             </div>
 
                         </div>
@@ -36,9 +36,9 @@
                 </div>
 
                 <form action="<?= site_url("ajustesSalariais/salvarApi") ?>" method="post">
-                    <input type="hidden" name="id_ajuste" value="<?= _v($dados, 'id_ajuste') ?>" />
-                    <input type="hidden" name="cargo" value="<?= _v($cargo, 'id') ?>" />
-                    <input type="hidden" name="salario_antigo" value="<?= _v($cargo, 'salario') ?>" />
+                    <input id="id_ajuste" type="hidden" name="id_ajuste" value="<?= _v($dados, 'id_ajuste') ?>" />
+                    <input id="id_cargo" type="hidden" name="cargo" value="<?= _v($cargo, 'id') ?>" />
+                    <input id="salario_antigo" type="hidden" name="salario_antigo" value="<?= _v($cargo, 'salario') ?>" />
                     <div class="form-group">
 
                         <label class="col-md-2 control-label" for="vinculo">Novo Salário<h11>*</h11></label>
@@ -51,7 +51,7 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label" for="Cadastrar"></label>
                         <div class="col-md-8">
-                            <button class="btn btn-success" type="Submit">Registrar</button>
+                            <button id="registrar" class="btn btn-success" type="Submit">Registrar</button>
                             <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                         </div>
                     </div>

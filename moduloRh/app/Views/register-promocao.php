@@ -81,7 +81,7 @@ use App\Controllers\Home;
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label" for="cargo">Cargo <h11>*</h11></label>
                                                 <div class="col-md-3">
-                                                    <select required id="" name="cargo" class="form-control cargo" >
+                                                    <select required id="cargo" name="cargo" class="form-control cargo" >
                                                         <option value="">Selecione um Setor antes</option>                     
                                                     </select>
                                                 </div>                                              
@@ -98,7 +98,7 @@ use App\Controllers\Home;
                                 <label class="col-md-2 control-label" for="Cadastrar"></label>
                                 <?php if (isset($setor)) : ?>
                                     <div class="col-md-8">
-                                        <button class="btn btn-success" type="Submit">Promover</button>
+                                        <button id="promover"class="btn btn-success" type="Submit">Promover</button>
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php endif; ?>

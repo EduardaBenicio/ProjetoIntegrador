@@ -52,7 +52,7 @@ use App\Controllers\Home;
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-1 control-label">
-                                        <a href="<?= site_url("SetorController/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
+                                        <a id="voltar" href="<?= site_url("SetorController/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
 
                                     </div>
                                     <div class="col-md-4 control-label">
@@ -97,12 +97,12 @@ use App\Controllers\Home;
                                 <label class="col-md-2 control-label" for="Cadastrar"></label>
                                 <?php if (isset($setor)) : ?>
                                     <div class="col-md-8">
-                                        <button class="btn btn-success" type="Submit" onclick='return alertSetorAtt();'>Cadastrar</button>
+                                        <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertSetorAtt();'>Cadastrar</button>
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php else : ?>
                                     <div class="col-md-8">
-                                        <button class="btn btn-success" type="Submit" onclick='return alertSetorAdd();'>Cadastrar</button>
+                                        <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertSetorAdd();'>Cadastrar</button>
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php endif; ?>
