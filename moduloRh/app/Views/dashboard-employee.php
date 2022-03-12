@@ -9,6 +9,10 @@
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item active">Painel</li>
             </ol>
+            <div class="col-md-1 control-label">
+                                    <a href="<?= site_url("funcionarios/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
+
+                                </div><br><br>
 
             <?php if(isset($funcionario['name'])):?>
                 <?php if(isset($alert)):?>
@@ -110,7 +114,7 @@
 
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário:</b></h8>
-                                <h10> R$<?= number_format($funcionario['cargo']['salario'], 2)?></h10>
+                                <h10> R$<?= number_format($funcionario['cargo']['salario'], 2, ".",",")?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Dia de Pagamento:</b></h8>
@@ -118,11 +122,11 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Valor Devido:</b></h8>
-                                <h10> R$<?= number_format($funcionario['valorDevidoAtual'], 2) ?></h10>
+                                <h10> R$<?= number_format($funcionario['valorDevidoAtual'], 2,".",",") ?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                             <h8><b>Valor do desconto do INSS:</b></h8>
-                                <h10> R$<?= number_format($funcionario['inss'], 2)?></h10>
+                                <h10> R$<?= number_format($funcionario['inss'], 2,".",",")?></h10>
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Data do Ultimo Pagamento:</b></h8>
@@ -130,7 +134,7 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Décimo Terceiro:</b></h8>
-                                <h10> <?= number_format($funcionario['decimoTerceiro'], 2)?></h10>
+                                <h10> R$<?= number_format($funcionario['decimoTerceiro'], 2, ".", ",")?></h10>
                             </div>
                             
                         

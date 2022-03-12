@@ -4,6 +4,29 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+    public function getToken(){
+        $ch = curl_init('http://service-api-rh.herokuapp.com/api/cargo/all');
+        #para pegar o token ja tem que se autenticar
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+        curl_setopt($ch, CURLOPT_USERPWD, "eduarda" . ":" . "teste");
+        #estava faltando
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    
+        // get headers too with this line
+        curl_setopt($ch, CURLOPT_HEADER, 1);
+        $result = curl_exec($ch);
+        //print_r($result);#aqui eu confirmei que esta autenticado, antes estava dando falha
+        // get cookie
+        // multi-cookie variant contributed by @Combuster in comments
+        preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $result, $matches);
+        $cookies = array();
+        foreach ($matches[1] as $item) {
+            parse_str($item, $cookie);
+            $cookies = array_merge($cookies, $cookie);
+        }
+        return $cookies;#retorna o cookie inteiro, pois vamos precisar
+    }
+
     public function index()
     {
         return view('login');
@@ -13,33 +36,31 @@ class Home extends BaseController
         return view('index');
     }
     public function logar(){
+
         $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
         $post['password'] = sha1($post['password']);
-        $url = "http://localhost:8080/api/login";
-        $payload = json_encode($post);
-        $ch = curl_init($url);
+       
+
+       
+       
+        #precisamos do token e da sessao
+        #isso porque, provavelmente o axios ja lida com a sessão automaticamente
+        #aí no código do Iramar não deu pra ver isso, mas o CURL é muito simples, não faz isso
+        #tem outras bibliotecas PHP q fazem o controle do cookie automaticamente, acho que o Guzzle faz
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+        curl_setopt($ch, CURLOPT_USERPWD, "eduarda" . ":" . "teste");
+        curl_setopt($ch, CURLOPT_URL, "http://service-api-rh.herokuapp.com/api/login?username={$post['user']}&password={$post['password']}");
+
+        // Receive server response ...
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-        // Use POST request
-        curl_setopt($ch, CURLOPT_POST, true);
 
-        // Set payload for POST request
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-
-        // Set HTTP Header for POST request 
-        curl_setopt(
-            $ch,
-            CURLOPT_HTTPHEADER,
-            array(
-                'Content-Type: application/json',
-                'Content-Length: ' . strlen($payload)
-            )
-        );
-        
+       
+       
         //Json para Array 
         $funcioarios = json_decode(curl_exec($ch), true);
-        
+
+       
         if($funcioarios != ""){
             $_SESSION["user"]["name"] = $funcioarios["name"];
             $_SESSION['user']['id'] = $funcioarios["id"];

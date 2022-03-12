@@ -34,13 +34,17 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário:</b></h8>
-                                <h10> R$<?=number_format($cargo['salario'], 2)?></h10>
+                                <h10> R$<?=number_format($cargo['salario'], 2,".",",")?></h10>
 
                             </div>
                            
                         </div>
                     </div>
                 </div>
+                <div class="col-md-1 control-label">
+                                <a href="<?= site_url("CargoController/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
+
+                            </div>
             <?php else:?>
                 <div id="layoutError_content">
                     <main>

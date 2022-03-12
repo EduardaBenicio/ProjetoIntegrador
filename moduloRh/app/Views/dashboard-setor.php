@@ -9,6 +9,7 @@
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item active">Painel</li>
             </ol>
+            
 
             <?php if(isset($setor['name'])):?>
                 <?php if(isset($alert)):?>
@@ -30,6 +31,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-1 control-label">
+                                        <a href="<?= site_url("SetorController/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
+
+                                    </div>
             <?php else:?>
                 <div id="layoutError_content">
                     <main>

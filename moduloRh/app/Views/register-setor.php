@@ -97,12 +97,12 @@ use App\Controllers\Home;
                                 <label class="col-md-2 control-label" for="Cadastrar"></label>
                                 <?php if (isset($setor)) : ?>
                                     <div class="col-md-8">
-                                        <button class="btn btn-success" type="Submit" onclick='return alertSetorAtt();'>Cadastrar</button>
+                                        <button class="btn btn-success" type="Submit">Cadastrar</button>
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php else : ?>
                                     <div class="col-md-8">
-                                        <button class="btn btn-success" type="Submit" onclick='return alertSetorAdd();'>Cadastrar</button>
+                                        <button class="btn btn-success" type="Submit" >Cadastrar</button>
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php endif; ?>

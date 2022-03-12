@@ -33,7 +33,14 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Painel de Cargos</li>
                         </ol>
-                        <a class="btn btn-primary" href="<?=site_url("CargoController/registerCargo")?>" role="button">Cadastrar Cargo</a>
+                        <?php if(isset($cargos)):?>
+                            <a class="btn btn-primary" href="<?=site_url("CargoController/registerCargo")?>" role="button">Cadastrar Cargo</a>
+                        <?php else: ?>
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                Selecione um SETOR acima!
+                            </div>
+                        <?php endif;?>
+                       
                         
                         <div class="row">
                              
@@ -81,7 +88,7 @@
                                                 </th>
                                                 <th>
                                                     <a href="">
-                                                        <?="R$".number_format($item['salario'], 2)?>
+                                                        <?="R$".number_format($item['salario'], 2, ".",",")?>
                                                     </a>
                                                 </th>
                                                 <th>
