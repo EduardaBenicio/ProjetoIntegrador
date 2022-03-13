@@ -34,13 +34,21 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário:</b></h8>
+<<<<<<< HEAD
+                                <h10> R$<?=number_format($cargo['salario'], 2,".",",")?></h10>
+=======
                                 <h10 id="salario" name="salario"> R$<?=number_format($cargo['salario'], 2)?></h10>
+>>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
 
                             </div>
                            
                         </div>
                     </div>
                 </div>
+                <div class="col-md-1 control-label">
+                                <a href="<?= site_url("CargoController/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
+
+                            </div>
             <?php else:?>
                 <div id="layoutError_content">
                     <main>

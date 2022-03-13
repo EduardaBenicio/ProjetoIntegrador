@@ -97,12 +97,20 @@ use App\Controllers\Home;
                                 <label class="col-md-2 control-label" for="Cadastrar"></label>
                                 <?php if (isset($setor)) : ?>
                                     <div class="col-md-8">
+<<<<<<< HEAD
+                                        <button class="btn btn-success" type="Submit">Cadastrar</button>
+=======
                                         <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertSetorAtt();'>Cadastrar</button>
+>>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php else : ?>
                                     <div class="col-md-8">
+<<<<<<< HEAD
+                                        <button class="btn btn-success" type="Submit" >Cadastrar</button>
+=======
                                         <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertSetorAdd();'>Cadastrar</button>
+>>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php endif; ?>

@@ -24,7 +24,11 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário:</b></h8>
+<<<<<<< HEAD
+                                <h10> <?= number_format($cargo['salario'], 2,".",",")?></h10>
+=======
                                 <h10 id= "salarioAtual"> <?= number_format($cargo['salario'], 2)?></h10>
+>>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Setor:</b></h8>

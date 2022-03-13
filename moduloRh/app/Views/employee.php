@@ -31,7 +31,6 @@
                                             <th>Usuário</th>
                                             <th>Cargo</th>
                                             <th>Setor</th>
-                                            <th>Data de nascimento</th>
                                             <th>Data de início</th>
                                             <th>Salario</th>
                                             <th>Editar</th>
@@ -45,7 +44,6 @@
                                             <th>Usuário</th>
                                             <th>Cargo</th>
                                             <th>Setor</th>
-                                            <th>Nascimento</th>
                                             <th>Data de início</th>
                                             <th>Salario</th>
                                             <th>Editar</th>
@@ -55,10 +53,20 @@
                                     </tfoot>
                             
                                     <tbody>
-                                        
+                                            <?php if(isset($funcionarios) && $funcionarios != null):?>
                                             <?php foreach($funcionarios as $key =>$item):?>
                                                 
                                                     <tr>
+<<<<<<< HEAD
+                                                        <th><?=$item['name']?></th>
+                                                        <th><?=$item['cpf']?></th>
+                                                        <th><?=$item['usuario']['username']?></th>
+                                                        <th><?=$item['cargo']['name']?></th>
+                                                        <th><?=$item['cargo']['sector']['name']?></th>
+                                                       
+                                                        <th><?=$item['dataIngresso']?></th>
+                                                        <th>R$<?=number_format($item['cargo']['salario'], 2,".",",")?></th>
+=======
                                                         <th id="name" name="name"><?=$item['name']?></th>
                                                         <th id="cpf" name="cpf">><?=$item['cpf']?></th>
                                                         <th id="user" name="user">><?=$item['user']?></th>
@@ -67,6 +75,7 @@
                                                         <th id="dataNasc" name="dataNasc">><?=$item['dataNasc']?></th>
                                                         <th id="dataIngresso" name="dataIngresso">><?=$item['dataIngresso']?></th>
                                                         <th id="salario" name="salario">>R$<?=number_format($item['cargo']['salario'], 2)?></th>
+>>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
                                                          <!--EDIT-->
                                                         <th >
                                                         <a id="editar" name="editar" href="<?=site_url("Funcionarios/registerEmployee/{$item['id']}")?>">
@@ -94,7 +103,7 @@
                                                             </tr>
                                                 
                                             <?php endforeach;?>
-                                           
+                                           <?php endif;?>
                                     </tbody>
                                 </table>
                     <?php else:?>

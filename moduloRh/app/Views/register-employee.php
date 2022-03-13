@@ -311,7 +311,6 @@ use App\Controllers\Home;
                                     <label class="col-md-2 control-label" for="profissao">Usuário<h11>*</h11></label>
                                     <div class="col-md-3">
                                         <input id="user" name="user" value="<?= _v($dados, "user") ?>" type="text" placeholder="" class="form-control input-md" required="">
-
                                     </div>
 
                                     <label class="col-md-2 control-label" for="profissao">Senha<h11>*</h11></label>
@@ -319,11 +318,29 @@ use App\Controllers\Home;
                                         <input id="password" name="password" type="text" placeholder="" class="form-control input-md" required="">
 
                                     </div>
+                                           
                                 </div>
 
+                               
+                                <div class="form-group">
+                                    <!-- Text input-->
+
+                                    <label class="col-md-2 control-label" for="authorities">Nível de acesso<h11>*</h11></label>
+                                    <div class="col-md-3">
+                                        <select required name="authorities" class="form-control" >
+                                            <option value=""></option>    
+                                            <option value="ROLE_ADMIN,ROLE_USER">ADMIN</option>
+                                            <option value="ROLE_USER">PADRÃO</option>                                    
+                                        </select>
+                                    </div>
+
+                                   
+                                           
+                                </div>
 
                             </div>
-
+                            <br>
+                            
                             <!-- Button (Double) -->
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="Enviar"></label>

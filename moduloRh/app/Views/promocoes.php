@@ -11,8 +11,10 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active"><?=$funcionario['name']?></li>
                         </ol>
-                        <a class="btn btn-primary" href="<?=site_url("funcionarios/promover/{$funcionario['id']}")?>" role="button">Promover <?=$funcionario['name']?></a>
-                        
+                        <a class="btn btn-primary" href="<?=site_url("Funcionarios/promover/{$funcionario['id']}")?>" role="button">Promover <?=$funcionario['name']?></a>
+                        <br>
+                        <br>
+                        <a href="<?= site_url("Funcionarios/dashboardEmployee/{$funcionario['id']}") ?>" class="btn btn-secondary " role="button" aria-pressed="true">Voltar</a>
                         <div class="row">
                              
                         </div>

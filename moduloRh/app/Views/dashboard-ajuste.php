@@ -43,6 +43,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-1 control-label">
+                                <a href="<?= site_url("CargoController/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
+
+                            </div>
             <?php else:?>
                 <div id="layoutError_content">
                     <main>
