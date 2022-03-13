@@ -126,7 +126,7 @@ use App\Controllers\Home;
                                 <div class="col-md-3">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                        <input id="prependedtext" name="phone" value="<?= _v($dados, "phone") ?>" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" OnKeyPress="formatar('## #####-####', this)">
+                                        <input id="phone" name="phone" value="<?= _v($dados, "phone") ?>" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" OnKeyPress="formatar('## #####-####', this)">
                                     </div>
                                 </div>
                             </div>
@@ -277,7 +277,7 @@ use App\Controllers\Home;
                                     <div class="form-group">
                                                 <label class="col-md-2 control-label" for="cargo">Cargo <h11>*</h11></label>
                                                 <div class="col-md-3">
-                                                    <select required id="" name="cargo" class="form-control cargo" >
+                                                    <select required id="cargo" name="cargo" class="form-control cargo" >
                                                         <option value="">Selecione um Setor antes</option>                     
                                                     </select>
                                                 </div>                                              
@@ -345,7 +345,7 @@ use App\Controllers\Home;
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="Enviar"></label>
                                 <div class="col-md-8">
-                                    <button class="btn btn-success" type="Submit">Enviar</button>
+                                    <button id="enviar" class="btn btn-success" type="Submit">Enviar</button>
                                     <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                 </div>
                             </div>

@@ -13,7 +13,7 @@
 
             <?php if(isset($setor['name'])):?>
                 <?php if(isset($alert)):?>
-                    <div class="alert alert-success alert-dismissible" role="alert">
+                    <div id="sucesso" name="sucesso" class="alert alert-success alert-dismissible" role="alert">
                         Setor adicionado com sucesso!
                     </div>
                 <?php endif;?>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-xl-9 col-md-6"><br>
                                 <h8><b>Nome do Setor:</b></h8>
-                                <h10> <?= $setor['name'] ?></h10>
+                                <h10 id="name" name="name"> <?= $setor['name'] ?></h10>
 
                             </div><br>
                         </div>

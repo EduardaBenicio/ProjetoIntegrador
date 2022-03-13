@@ -1,0 +1,27 @@
+CRITICAL - 2022-03-09 12:31:29 --> unlink(C:\php\htdocs\moduloRh\writable\debugbar/debugbar_1646610066.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\php\\h...', 'C:\\php\\htdocs\\m...', 74)
+#1 C:\php\htdocs\moduloRh\system\Debug\Toolbar\Collectors\History.php(74): unlink('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\Debug\Toolbar.php(487): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1646850664, 20)
+#3 C:\php\htdocs\moduloRh\system\Debug\Toolbar.php(464): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 C:\php\htdocs\moduloRh\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#5 C:\php\htdocs\moduloRh\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(302): CodeIgniter\Events\Events::trigger('pre_system')
+#7 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-09 12:31:37 --> Undefined array key 2
+#0 C:\php\htdocs\moduloRh\app\Controllers\Funcionarios.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\php\\htdocs\\m...', 200)
+#1 C:\php\htdocs\moduloRh\system\CodeIgniter.php(825): App\Controllers\Funcionarios->dashboardEmployee('2')
+#2 C:\php\htdocs\moduloRh\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#3 C:\php\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-09 12:32:09 --> unlink(C:\php\htdocs\moduloRh\writable\debugbar/debugbar_1646610074.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\php\\h...', 'C:\\php\\htdocs\\m...', 74)
+#1 C:\php\htdocs\moduloRh\system\Debug\Toolbar\Collectors\History.php(74): unlink('C:\\php\\htdocs\\m...')
+#2 C:\php\htdocs\moduloRh\system\Debug\Toolbar.php(487): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1646850714, 20)
+#3 C:\php\htdocs\moduloRh\system\Debug\Toolbar.php(464): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 C:\php\htdocs\moduloRh\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#5 C:\php\htdocs\moduloRh\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#6 C:\php\htdocs\moduloRh\system\CodeIgniter.php(302): CodeIgniter\Events\Events::trigger('pre_system')
+#7 C:\php\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

@@ -23,6 +23,7 @@ public class PromocaoService {
     public Promocao save(Promocao promocao){
             Funcionario cliente = promocao.getFuncionario();
             cliente.setCargo(promocao.getCargoNovo());
+            cliente.setDataIngressoCargo(promocao.getDataDaMudanca());
             funcionariosService.update(cliente);
         return promocaoRepository.save(promocao);
     }
@@ -30,6 +31,7 @@ public class PromocaoService {
             Funcionario cliente;
             cliente = promocao.getFuncionario();
             cliente.setCargo(promocao.getCargoNovo());
+            cliente.setDataIngressoCargo(promocao.getDataDaMudanca());
             funcionariosService.update(cliente);
         return promocaoRepository.save(promocao);
     }

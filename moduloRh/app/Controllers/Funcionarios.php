@@ -290,6 +290,25 @@ class Funcionarios extends BaseController
         $funcionario = json_decode(curl_exec($ch), true);
 
         $res['funcionario'] = $funcionario;
+
+        //Juinin e suas gambiarras 
+        if(isset($funcionario['dataIngresso']) && isset($funcionario['dataIngressoCargo'])){
+            $dataIngresso = $funcionario['dataIngresso'];
+            $dataAtual = date('d/m/Y');
+            $dataIngresso = explode('/',$dataIngresso);
+            $dataAtual = explode('/',$dataAtual);
+            $dataIng = strtotime("$dataIngresso[2]-$dataIngresso[1]-$dataIngresso[0]");
+            $dataAtu = strtotime("$dataAtual[2]-$dataAtual[1]-$dataAtual[0]");
+            $diasIngressado = ($dataAtu - $dataIng)/86400;
+
+            $dataCargo = $funcionario['dataIngressoCargo'];
+            $dataCargo = explode('/',$dataCargo);
+            $dataCar = strtotime("$dataCargo[2]-$dataCargo[1]-$dataCargo[0]");
+            $diasIngressadoNoCargo = ($dataAtu - $dataCar)/86400;
+
+            $res['diasIngressado'] = $diasIngressado;
+            $res['diasIngressadoNoCargo'] = $diasIngressadoNoCargo;
+        }
         
         return view('dashboard-employee', $res);
     }

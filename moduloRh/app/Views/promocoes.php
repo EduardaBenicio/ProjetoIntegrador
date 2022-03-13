@@ -54,30 +54,20 @@
                                         <?php if(isset($promocoes)): ?>
                                             <?php foreach($promocoes as $key =>$item):?>
                                             <tr>
-                                                <th>
-                                                    <a href="">
-                                                        <?=$item['funcionario']['name']?>
-                                                    </a>
+                                                <th id="funcionarioName" name="funcionarioName">
+                                                    <?=$item['funcionario']['name']?>
                                                 </th>
-                                                <th>
-                                                    <a href="">
-                                                        <?=$item['funcionario']['cpf']?>
-                                                    </a>
+                                                <th id="cpf" name="cpf">
+                                                   <?=$item['funcionario']['cpf']?>
                                                 </th>
-                                                <th>
-                                                    <a href="">
-                                                        <?=$item['cargoAntigo']['name']?>
-                                                    </a>
+                                                <th id="cargoAntigo" name="cargoAntigo">
+                                                    <?=$item['cargoAntigo']['name']?>
                                                 </th>
-                                                <th>
-                                                    <a href="">
-                                                        <?=$item['cargoNovo']['name']?>
-                                                    </a>
+                                                <th id="cargoNovo" name="cargoNovo">
+                                                    <?=$item['cargoNovo']['name']?>
                                                 </th>
-                                                <th>
-                                                    <a href="">
-                                                        <?=$item['dataDaMudanca']?>
-                                                    </a>
+                                                <th id="dataDaMudanca" name="dataDaMudanca">
+                                                     <?=$item['dataDaMudanca']?>
                                                 </th>
                                                  <!--EDIT
                                                 <th >

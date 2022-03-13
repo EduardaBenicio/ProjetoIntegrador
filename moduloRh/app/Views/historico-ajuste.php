@@ -43,22 +43,22 @@
                                         <?php if(isset($ajustes)): ?>
                                             <?php foreach($ajustes as $key =>$item):?>
                                             <tr>
-                                                <th>
+                                                <th id="cargoName" name="cargoName">
                                                     <a href="">
                                                         <?=$item['cargo']['name']?>
                                                     </a>
                                                 </th>
-                                                <th>
+                                                <th id="salario_antigo" name="salario_antigo">
                                                     <a href="">
                                                         <?=$item['salario_antigo']?>
                                                     </a>
                                                 </th>
-                                                <th>
+                                                <th id="salario_novo" name="salario_novo">
                                                     <a href="">
                                                         <?=$item['salario_novo']?>
                                                     </a>
                                                 </th>
-                                                <th>
+                                                <th id="date_change" name="date_change">
                                                     <a href="">
                                                         <?=$item['date_change']?>
                                                     </a>

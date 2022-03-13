@@ -10,12 +10,13 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Painel de funcionários</li>
                         </ol>
-                        <a class="btn btn-primary" href="<?=site_url("funcionarios/registerEmployee")?>" role="button">Cadastrar funcionário</a>
+                        <a id="registerEmployee" name="registerEmployee" class="btn btn-primary" href="<?=site_url("funcionarios/registerEmployee")?>" role="button">Cadastrar funcionário</a>
                         
                         <div class="row">
                              
                         </div>
                         <br>
+                        <?php if(isset($item['name'])):?>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
@@ -56,6 +57,7 @@
                                             <?php foreach($funcionarios as $key =>$item):?>
                                                 
                                                     <tr>
+<<<<<<< HEAD
                                                         <th><?=$item['name']?></th>
                                                         <th><?=$item['cpf']?></th>
                                                         <th><?=$item['usuario']['username']?></th>
@@ -64,9 +66,19 @@
                                                        
                                                         <th><?=$item['dataIngresso']?></th>
                                                         <th>R$<?=number_format($item['cargo']['salario'], 2,".",",")?></th>
+=======
+                                                        <th id="name" name="name"><?=$item['name']?></th>
+                                                        <th id="cpf" name="cpf">><?=$item['cpf']?></th>
+                                                        <th id="user" name="user">><?=$item['user']?></th>
+                                                        <th id="cargoName" name="cargoName">><?=$item['cargo']['name']?></th>
+                                                        <th id="setorName" name="setorName">><?=$item['cargo']['sector']['name']?></th>
+                                                        <th id="dataNasc" name="dataNasc">><?=$item['dataNasc']?></th>
+                                                        <th id="dataIngresso" name="dataIngresso">><?=$item['dataIngresso']?></th>
+                                                        <th id="salario" name="salario">>R$<?=number_format($item['cargo']['salario'], 2)?></th>
+>>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
                                                          <!--EDIT-->
                                                         <th >
-                                                        <a href="<?=site_url("Funcionarios/registerEmployee/{$item['id']}")?>">
+                                                        <a id="editar" name="editar" href="<?=site_url("Funcionarios/registerEmployee/{$item['id']}")?>">
                                                             <svg  class="edit" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                                                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5
                                                                 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -77,7 +89,7 @@
                                                         </th>
                                                         <!--DELETE-->
                                                         <th>
-                                                            <a href="<?=site_url("Funcionarios/deleteFuncionario/{$item['id']}")?>" onclick='return confirmDeleteUser();'>
+                                                            <a id="deletar" name="deletar" href="<?=site_url("Funcionarios/deleteFuncionario/{$item['id']}")?>" onclick='return confirmDeleteUser();'>
                                                                 <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                                                     <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 
                                                                         0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59
@@ -87,13 +99,28 @@
                                                                 </svg>
                                                             </a>
                                                         </th>
-                                                                <th><a class="btn btn-primary" href="<?=site_url("funcionarios/dashboardEmployee/{$item['id']}")?>" role="button">Ver mais</a></th>
+                                                                <th><a id="verMais" name="verMais" class="btn btn-primary" href="<?=site_url("funcionarios/dashboardEmployee/{$item['id']}")?>" role="button">Ver mais</a></th>
                                                             </tr>
                                                 
                                             <?php endforeach;?>
                                            <?php endif;?>
                                     </tbody>
                                 </table>
+                    <?php else:?>
+                    <div id="layoutError_content">
+                        <main>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6">
+                                        <div class="text-center mt-4">
+                                            <p class="lead">Sem conexão com o servidor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                    <?php endif;?>
                             </div>
                         </div>
                     </div>

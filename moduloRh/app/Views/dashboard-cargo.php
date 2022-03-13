@@ -12,7 +12,7 @@
     
             <?php if(isset($cargo['name'])):?>
                 <?php if(isset($alert)):?>
-                    <div class="alert alert-success alert-dismissible" role="alert">
+                    <div id="sucesso" name="sucesso" class="alert alert-success alert-dismissible" role="alert">
                         Cargo adicionado com sucesso!
                     </div>
                 <?php endif;?>
@@ -24,17 +24,21 @@
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Nome do Cargo:</b></h8>
-                                <h10> <?= $cargo['name'] ?></h10>
+                                <h10 id="nome" name="nome"> <?= $cargo['name'] ?></h10>
 
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Setor:</b></h8>
-                                <h10> <?= $cargo['sector']['name'] ?></h10>
+                                <h10 id="nomeSector" name="nomeSector"> <?= $cargo['sector']['name'] ?></h10>
 
                             </div>
                             <div class="col-xl-9 col-md-6">
                                 <h8><b>Salário:</b></h8>
+<<<<<<< HEAD
                                 <h10> R$<?=number_format($cargo['salario'], 2,".",",")?></h10>
+=======
+                                <h10 id="salario" name="salario"> R$<?=number_format($cargo['salario'], 2)?></h10>
+>>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
 
                             </div>
                            
