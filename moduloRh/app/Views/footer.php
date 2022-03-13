@@ -13,9 +13,6 @@
             </div>
         </div>
         <script src="<?=base_url("js/Chart.min.js")?>" crossorigin="anonymous"></script>
-        <script src="<?=base_url("assets/demo/chart-pie-demo.js")?>"></script>
-        <script src="<?=base_url("assets/demo/chart-area-demo.js")?>"></script>
-        <script src="<?=base_url("assets/demo/chart-bar-demo.js")?>"></script>
         <script src="<?=base_url("js/bootstrap.bundle.min.js")?>" crossorigin="anonymous"></script>
         <script src="<?=base_url("js/scripts.js")?>"></script>
         <script src="<?=base_url("js/simple-datatables@latest.js")?>" crossorigin="anonymous"></script>
