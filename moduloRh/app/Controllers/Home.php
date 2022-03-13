@@ -59,7 +59,7 @@ class Home extends BaseController
        
         //Json para Array 
         $funcioarios = json_decode(curl_exec($ch), true);
-
+      
        
         if($funcioarios != ""){
             $_SESSION["user"]["name"] = $funcioarios["name"];

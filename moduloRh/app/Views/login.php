@@ -7,59 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Login - SB Admin</title>
-    <link href="<?= base_url("css/styles.css") ?>" rel="stylesheet" />
-    <script src="<?= base_url("js/all.min.js") ?>" crossorigin="anonymous"></script>
+    <title>RH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link href="<?= base_url("css/teste.css") ?>" rel="stylesheet" />
+    <link rel="icon" type="image/jpg" href="<?= base_url("images/logo.png") ?>" />
 </head>
 
 <body class="bg-primary">
-    <div id="layoutAuthentication">
-        <div id="layoutAuthentication_content">
-            <main>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-5">
-                            <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header">
-                                    <h3 class="text-center font-weight-light my-4">Login</h3>
-                                </div>
-                                <div class="card-body text-center">
-                                   
-                                    <form method="post" action='<?=site_url("home/logar")?>' >
-                                        <div class="form-group">
-                                            <label class="col-md-2 control-label" for="user">Usuário:</label>
-                                            <input id="user" name="user" type="text" class="form-control" id="user" placeholder="Insira seu usuário">
-                                            
-                                        </div>
-                                        </br>
-                                        <div class="form-group">
-                                            <label class="col-md-2 control-label" for="password">Senha:</label>
-                                            <input id="password" type="password" name="password" class="form-control" id="password" placeholder="Insira sua senha">
-                                        </div>
-                                        <div id="erro" class="text-center form-group col-md-6">
-                                                <?=session("erro");?>
-                                        </div>
-                                        </br>
-                                        <div class="text-center form-group">
-                                            <button id="botao" type="submit" class="btn btn-primary col-md-3 col-xl-3 ">Login</button>
-                                        </div>
 
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <body style="background: #888f97;">
+        <div class="login-dark" style="height: 695px;">
+            <form method="post" action='<?= site_url("home/logar") ?>'>
+
+                <div class="illustration">
+                    <img src="<?= base_url("images/logo.png") ?>" width="100" height="100">
+                    <h2 style="text-align:center; color:antiquewhite;">Recursos Humanos</h2>
                 </div>
-            </main>
+
+
+                <div class="form-group">
+                    Usuário <input name="user" type="text" id="user">
+                </div>
+                <div class="form-group">
+                    Senha <input type="password" name="password" id="password">
+                </div>
+                <div id="erro" class="text-center form-group col-md-6">
+                    <?= session("erro"); ?>
+                </div>
+                <div class="form-group">
+                    <button name="button" class="btn btn-primary btn-block">Entrar</button>
+                </div>
+                <p style="font-size: 10px; text-align:center">Copyright 2022</p>
+            </form>
         </div>
-        <div id="layoutAuthentication_footer">
-            <footer class="py-4 bg-light mt-auto">
-               
-            </footer>
-        </div>
-    </div>
-    <script src="<?= base_url("js/bootstrap.bundle.min.js") ?>" crossorigin="anonymous"></script>
-    <script src="<?= base_url("js/scripts.js") ?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    </body>
 </body>
 
 </html>

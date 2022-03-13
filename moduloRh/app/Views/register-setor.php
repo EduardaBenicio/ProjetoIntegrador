@@ -51,22 +51,22 @@ use App\Controllers\Home;
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-1 control-label">
-                                        <a id="voltar" href="<?= site_url("SetorController/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
-
-                                    </div>
+                                    <a href="<?= site_url("cargoController/index/") ?>">
+                                        <i class="fas fa-arrow-left me-1"></i>
+                                        Voltar
+                                    </a>
                                     <div class="col-md-4 control-label">
 
                                         <h3>Dados do setor</h3>
-                                        
+
                                     </div>
-                                    
+
                                 </div>
-                               
+
                                 <!-- Text input-->
                                 <?php if (isset($setor)) : ?>
                                     <div class="form-group">
-                                    
+
                                         <label class="col-md-2 control-label" for="name"> Nome<h11>*</h11></label>
                                         <div class="col-md-8">
                                             <input id="id_Sector" name="id_Sector" class="form-control input-md" value="<?= $setor['id'] ?>" required="" type="hidden">
@@ -75,20 +75,20 @@ use App\Controllers\Home;
                                     </div>
                                 <?php else : ?>
                                     <div class="form-group">
-                                        
+
                                         <label class="col-md-2 control-label" for="name"> Nome<h11>*</h11></label>
                                         <div class="col-md-8">
-                                       
+
                                             <input id="name" name="name" placeholder="Nome do setor" class="form-control input-md" required="" type="text">
-                                            
+
                                         </div>
-                                        
+
                                     </div>
                                 <?php endif; ?>
-                                
-                                
-                                            
-                                       
+
+
+
+
 
                             </div>
 
@@ -97,20 +97,12 @@ use App\Controllers\Home;
                                 <label class="col-md-2 control-label" for="Cadastrar"></label>
                                 <?php if (isset($setor)) : ?>
                                     <div class="col-md-8">
-<<<<<<< HEAD
-                                        <button class="btn btn-success" type="Submit">Cadastrar</button>
-=======
-                                        <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertSetorAtt();'>Cadastrar</button>
->>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
+                                        <button id="registrar" class="btn btn-success" type="Submit">Cadastrar</button>
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php else : ?>
                                     <div class="col-md-8">
-<<<<<<< HEAD
-                                        <button class="btn btn-success" type="Submit" >Cadastrar</button>
-=======
-                                        <button id="registrar" class="btn btn-success" type="Submit" onclick='return alertSetorAdd();'>Cadastrar</button>
->>>>>>> 2d9bf3886ae54094b24b2a53b67ad02d964e7bf3
+                                        <button id="registrar" class="btn btn-success" type="Submit">Cadastrar</button>
                                         <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
                                 <?php endif; ?>

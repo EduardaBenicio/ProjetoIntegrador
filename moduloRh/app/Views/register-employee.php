@@ -21,7 +21,7 @@ use App\Controllers\Home;
         <link href="<?= base_url("css/bootstrap.min.css") ?>" rel="stylesheet" id="bootstrap-css">
         <script src="<?= base_url("js/bootstrap.min.js") ?>"></script>
         <script src="<?= base_url("js/jquery-1.11.1.min.js") ?>"></script>
-        
+
     </head>
 
 
@@ -48,19 +48,28 @@ use App\Controllers\Home;
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <div class="col-md-1 control-label">
-                                    <a href="<?= site_url("funcionarios/index") ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Voltar</a>
-
+                                    <?php if(isset($dados['id'])):?>
+                                        <a href="<?= site_url("funcionarios/dashboardEmployee/{$dados['id']}") ?>">
+                                            <i class="fas fa-arrow-left me-1"></i>
+                                            Voltar
+                                        </a>
+                                     <?php else:?>
+                                        <a href="<?= site_url("funcionarios/index") ?>">
+                                            <i class="fas fa-arrow-left me-1"></i>
+                                            Voltar
+                                        </a>
+                                    <?php endif;?>   
                                 </div></br>
-                                
+
                                 <div class="col-md-4 control-label">
 
                                     <h3>Dados pessoais do funcionário</h3>
                                 </div>
                             </div>
-                            
+
                             <!-- Text input-->
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="name"> Nome<h11>*</h11></label>
@@ -88,7 +97,7 @@ use App\Controllers\Home;
 
                                 <label class="col-md-1 control-label" for="name">Nascimento<h11>*</h11></label>
                                 <div class="col-md-2">
-                                    <input id="dataNasc" name="dataNasc" value="<?php echo date(_v($dados, "dataNasc")) ?>"placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                    <input id="dataNasc" name="dataNasc" value="<?php echo date(_v($dados, "dataNasc")) ?>" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                 </div>
 
                                 <!-- Multiple Radios (inline) -->
@@ -230,7 +239,7 @@ use App\Controllers\Home;
 
                                 <div class="col-md-3">
                                     <select required id="schooling" name="schooling" class="form-control">
-                                        <option alue="<?= _v($dados, "schooling") ?>" selected><?= _v($dados, "schooling"); ?></option>
+                                        <option value="<?= _v($dados, "schooling") ?>" selected><?= _v($dados, "schooling"); ?></option>
                                         <option value="Analfabeto">Analfabeto</option>
                                         <option value="Fundamental Incompleto">Fundamental Incompleto</option>
                                         <option value="Fundamental Completo">Fundamental Completo</option>
@@ -257,35 +266,35 @@ use App\Controllers\Home;
                                 <?php if (!isset($dados['id'])) : ?>
                                     <div class="form-group">
 
-                                       
+
 
 
                                         <div class="form-group">
-                                                <label class="col-md-2 control-label" for="sector">Setor <h11>*</h11></label>
-                                                <div class="col-md-3">
-                                                    <select required id="Funcionarios/cargosDoSetor" name="setores" class="form-control setor" >
-                                                        <option value=""></option> 
-                                                            <?php foreach ($setores as $key => $item) : ?>
-                                                                <option value="<?= $item['id_Sector'] ?>"><?= $item['name'] ?></option>
-                                                            <?php endforeach; ?>                     
-                                                    </select>
-                                                </div>
+                                            <label class="col-md-2 control-label" for="sector">Setor <h11>*</h11></label>
+                                            <div class="col-md-3">
+                                                <select required id="Funcionarios/cargosDoSetor" name="setores" class="form-control setor">
+                                                    <option value=""></option>
+                                                    <?php foreach ($setores as $key => $item) : ?>
+                                                        <option value="<?= $item['id_Sector'] ?>"><?= $item['name'] ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
                                             </div>
+                                        </div>
 
 
                                     </div>
                                     <div class="form-group">
-                                                <label class="col-md-2 control-label" for="cargo">Cargo <h11>*</h11></label>
-                                                <div class="col-md-3">
-                                                    <select required id="cargo" name="cargo" class="form-control cargo" >
-                                                        <option value="">Selecione um Setor antes</option>                     
-                                                    </select>
-                                                </div>                                              
-                                            </div>
+                                        <label class="col-md-2 control-label" for="cargo">Cargo <h11>*</h11></label>
+                                        <div class="col-md-3">
+                                            <select required id="cargo" name="cargo" class="form-control cargo">
+                                                <option value="">Selecione um Setor antes</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label class="col-md-2 control-label" for="name">Data de ingresso<h11>*</h11></label>
                                         <div class="col-md-3">
-                                            <input id="dataIngresso" value="<?= _v($dados, "dataIngresso") ?>" name="dataIngresso" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" min="<?=date('d/m/Y')?>" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                                            <input id="dataIngresso" value="<?= _v($dados, "dataIngresso") ?>" name="dataIngresso" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" min="<?= date('d/m/Y') ?>" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
                                         </div>
 
                                         <label class="col-md-2 control-label" for="name">Data de ingresso no cargo<h11>*</h11></label>
@@ -310,48 +319,52 @@ use App\Controllers\Home;
 
                                     <label class="col-md-2 control-label" for="profissao">Usuário<h11>*</h11></label>
                                     <div class="col-md-3">
-                                        <input id="user" name="user" value="<?= _v($dados, "user") ?>" type="text" placeholder="" class="form-control input-md" required="">
+                                        <?php if (isset($dados['usuario']['username'])) : ?>
+                                            <input id="id" name="id" value="<?= $dados['usuario']['id'] ?>" type="hidden" placeholder="" class="form-control input-md" required="">
+                                            <input id="user" name="user" value="<?= $dados['usuario']['username'] ?>" type="text" placeholder="" class="form-control input-md" required="">
+                                        <?php else : ?>
+                                            <input id="user" name="user" type="text" placeholder="" class="form-control input-md" required="">
+                                        <?php endif; ?>
+
+                                        <label class="col-md-2 control-label" for="profissao">Senha<h11>*</h11></label>
+                                        <div class="col-md-3    ">
+                                            <input id="password" name="password" type="text" placeholder="" class="form-control input-md" required="">
+
+                                        </div>
+
                                     </div>
 
-                                    <label class="col-md-2 control-label" for="profissao">Senha<h11>*</h11></label>
-                                    <div class="col-md-3    ">
-                                        <input id="password" name="password" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    <div class="form-group">
+                                        <!-- Text input-->
+
+                                        <label class="col-md-2 control-label" for="authorities">Nível de acesso<h11>*</h11></label>
+                                        <div class="col-md-3">
+                                            <select required name="authorities" class="form-control">
+                                                <option value=""></option>
+                                                <option value="ROLE_ADMIN,ROLE_USER">ADMIN</option>
+                                                <option value="ROLE_USER">PADRÃO</option>
+                                            </select>
+                                        </div>
+
+
 
                                     </div>
-                                           
+
                                 </div>
+                                <br>
 
-                               
+                                <!-- Button (Double) -->
                                 <div class="form-group">
-                                    <!-- Text input-->
-
-                                    <label class="col-md-2 control-label" for="authorities">Nível de acesso<h11>*</h11></label>
-                                    <div class="col-md-3">
-                                        <select required name="authorities" class="form-control" >
-                                            <option value=""></option>    
-                                            <option value="ROLE_ADMIN,ROLE_USER">ADMIN</option>
-                                            <option value="ROLE_USER">PADRÃO</option>                                    
-                                        </select>
+                                    <label class="col-md-2 control-label" for="Enviar"></label>
+                                    <div class="col-md-8">
+                                        <button id="enviar" class="btn btn-success" type="Submit">Enviar</button>
+                                        <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                     </div>
-
-                                   
-                                           
                                 </div>
 
                             </div>
-                            <br>
-                            
-                            <!-- Button (Double) -->
-                            <div class="form-group">
-                                <label class="col-md-2 control-label" for="Enviar"></label>
-                                <div class="col-md-8">
-                                    <button id="enviar" class="btn btn-success" type="Submit">Enviar</button>
-                                    <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
-                                </div>
-                            </div>
-
                         </div>
-                    </div>
 
 
                 </fieldset>
