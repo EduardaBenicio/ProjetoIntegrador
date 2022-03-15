@@ -320,7 +320,7 @@ use App\Controllers\Home;
                                     <label class="col-md-2 control-label" for="profissao">Usuário<h11>*</h11></label>
                                     <div class="col-md-3">
                                         <?php if (isset($dados['usuario']['username'])) : ?>
-                                            <input id="id" name="id" value="<?= $dados['usuario']['id'] ?>" type="hidden" placeholder="" class="form-control input-md" required="">
+                                            <input id="id_user" name="id_user" value="<?= $dados['usuario']['id'] ?>" type="hidden" placeholder="" class="form-control input-md" required="">
                                             <input id="user" name="user" value="<?= $dados['usuario']['username'] ?>" type="text" placeholder="" class="form-control input-md" required="">
                                         <?php else : ?>
                                             <input id="user" name="user" type="text" placeholder="" class="form-control input-md" required="">

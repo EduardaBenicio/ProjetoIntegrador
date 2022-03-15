@@ -86,7 +86,14 @@ class Pagamentos extends BaseController
         unset($funcionario['usuario']['accountNonExpired']);
         unset($funcionario['usuario']['credentialsNonExpired']);
         unset($funcionario['usuario']['accountNonLocked']);
-        $funcionario['usuario']['authorities'] = 'ROLE_ADMIN,ROLE_USER';
+        
+        if($funcionario['funcionario']["usuario"]['authorities'][0]['authority'] = "ROLE_ADMIN"){
+            
+            $funcionario['funcionario']["usuario"]['authorities'] = "ROLE_ADMIN,ROLE_USER";
+        }else{
+            $funcionario['funcionario']["usuario"]['authorities'] = "ROLE_USER";
+        }
+
         $post['funcionario'] = $funcionario;
         $post['date_payment'] = date('d/m/Y');
 
