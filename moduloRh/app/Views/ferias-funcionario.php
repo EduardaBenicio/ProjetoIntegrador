@@ -23,16 +23,10 @@
 
                     </div>
                     <br>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Tabela de Ferias
-                        </div>
-                
+          
                     <div class="container-fluid px-4">
                         
-                        <a class="btn btn-primary" href="<?=site_url("FeriasController/saveFerias/{$funcionario}")?>" role="button">Cadastrar Férias</a>
-                        <br><br>
+                      
                         <div class="row">
                             <p id="success" name="success" style="color:green;"><?=session("success");?> </p>
                         </div>

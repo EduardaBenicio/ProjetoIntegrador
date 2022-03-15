@@ -202,7 +202,9 @@ class Funcionarios extends BaseController
 
             //Json para Array 
             $funcionario = json_decode(curl_exec($ch), true);
-            
+
+           
+
             //Dados do Back para serem enviados para View
             $post['cargo'] = $funcionario['cargo'];
             $post['dataUltimoPag'] = $funcionario['dataUltimoPag'];
@@ -211,6 +213,7 @@ class Funcionarios extends BaseController
             $post['dataIngressoCargo'] = "02/02/2022";
             $post['dataNasc'] = date('d/m/Y', strtotime($post['dataNasc']));
             $post['password'] = sha1($post['password']);
+            $post['usuario']['id'] = $post['id_user'];
             $post['usuario']['username'] = $post['user'];
             $post['usuario']['password'] = $post['password'];
             $post['usuario']['authorities'] = $post['authorities'];
