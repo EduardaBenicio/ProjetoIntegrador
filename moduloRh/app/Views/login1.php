@@ -36,7 +36,7 @@
                                             <label class="col-md-2 control-label" for="password">Senha:</label>
                                             <input id="password" type="password" name="password" class="form-control" id="password" placeholder="Insira sua senha">
                                         </div>
-                                        <div id="erro" class="text-center form-group col-md-6">
+                                        <div id="erro" class="text-center form-group">
                                                 <?=session("erro");?>
                                         </div>
                                         </br>

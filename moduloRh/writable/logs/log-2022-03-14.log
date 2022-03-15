@@ -1,0 +1,7 @@
+CRITICAL - 2022-03-14 18:33:30 --> syntax error, unexpected ']', expecting ')'
+#0 C:\xampp\htdocs\moduloRh\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('funcionarios/da...')
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('funcionarios/da...')
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

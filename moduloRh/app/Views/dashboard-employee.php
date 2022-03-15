@@ -26,12 +26,16 @@
                         </div>
                     <?php endif; ?>
                     <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-primary text-white mb-4">
-                                <a id="registrarPagamento" name="registrarPagamento" class="btn btn-primary" href="<?= site_url("pagamentos/registerPayment/{$funcionario['id']}") ?>" role="button">Registrar pagamento</a>
+                        <?php if ($dias > 7) : ?>
+                            <div class="col-xl-3 col-md-6">
+
+                                <div class="card bg-primary text-white mb-4">
+                                    <a id="registrarPagamento" name="registrarPagamento" class="btn btn-primary" href="<?= site_url("pagamentos/registerPayment/{$funcionario['id']}") ?>" role="button">Registrar pagamento</a>
+
+                                </div>
 
                             </div>
-                        </div>
+                        <?php endif; ?>
                         <?php if (isset($diasIngressado)) : ?>
                             <?php if ($diasIngressado >= 365) : ?>
                                 <div class="col-xl-2 col-md-6">

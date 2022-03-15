@@ -7,7 +7,10 @@
         <div class="container-fluid px-4">
             <h1 class="mt-4">Dados do Funcionário</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">Painel</li>
+                    <a href="<?= site_url("funcionarios/index") ?>">
+                        <i class="fas fa-arrow-left me-1"></i>
+                        Voltar
+                    </a>
             </ol>
 
             <?php if(isset($ajuste['date_change'])):?>
