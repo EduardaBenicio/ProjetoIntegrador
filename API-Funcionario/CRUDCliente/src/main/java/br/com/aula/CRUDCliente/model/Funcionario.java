@@ -126,25 +126,57 @@ public class Funcionario {
     @Column(name = "inss")
     private double inss;
 
+    @Column(name = "pagamentoDecimo")
+    private String pagamentoDecimo;
+
     public double calcularDecimoTerceiro() {
-        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+
         double resultado = 0;
-        try{
-            Date date = formatador.parse(this.dataIngresso);
+        if(this.pagamentoDecimo != null) {
+            SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+
+            try {
+
+                Date dataAtual = new Date();
+                String dateToStr = String.format("%1$td/%1$tm/%1$tY", dataAtual);
+
+                SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+                Date dataInicio = format.parse(this.pagamentoDecimo);
+                Date dataFim = format.parse(dateToStr);
+
+                final double MES_EM_MILISEGUNDOS = 30.0 * 24.0 * 60.0 * 60.0 * 1000.0;
+
+                double numeroDeMeses = Math.round((double) ((dataFim.getTime() - dataInicio.getTime()) / MES_EM_MILISEGUNDOS));
 
 
-            Calendar dataIgresso = Calendar.getInstance();
-            Calendar dataAtual = Calendar.getInstance();
-            dataIgresso.setTime(date);
+                double calculo = this.cargo.getSalario() / 12;
+                this.decimoTerceiro = Math.round(calculo * numeroDeMeses);
+            } catch (ParseException e) {
+                e.getMessage();
+            }
+        }else{
+            SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
 
-            int mesesTrabalhados = +dataAtual.get(Calendar.MONTH)-dataIgresso.get(Calendar.MONTH);
+            try {
 
-            double calculo = this.cargo.getSalario() / 12;
-            this.decimoTerceiro = Math.round(calculo * mesesTrabalhados);
-        }catch (ParseException e){
-            e.getMessage();
+                Date dataAtual = new Date();
+                String dateToStr = String.format("%1$td/%1$tm/%1$tY", dataAtual);
+
+                SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+                Date dataInicio = format.parse(this.dataIngresso);
+                Date dataFim = format.parse(dateToStr);
+
+                final double MES_EM_MILISEGUNDOS = 30.0 * 24.0 * 60.0 * 60.0 * 1000.0;
+
+                double numeroDeMeses = Math.round((double) ((dataFim.getTime() - dataInicio.getTime()) / MES_EM_MILISEGUNDOS));
+
+
+                double calculo = this.cargo.getSalario() / 12;
+                this.decimoTerceiro = Math.round(calculo * numeroDeMeses);
+            } catch (ParseException e) {
+                e.getMessage();
+            }
         }
-
 
         return resultado;
     }
@@ -214,9 +246,12 @@ public class Funcionario {
 
                 Calendar datas = new GregorianCalendar();
                 int quantDias = datas.getActualMaximum(Calendar.DAY_OF_MONTH);
+
                 double val = this.cargo.getSalario() / quantDias;
 
                 this.valorDevidoAtual = Math.round(val * diffrence);
+
+
 
             }catch(ParseException e){
                 e.getMessage();
@@ -224,6 +259,5 @@ public class Funcionario {
         }
         return valorDevido;
     }
-
 
 }

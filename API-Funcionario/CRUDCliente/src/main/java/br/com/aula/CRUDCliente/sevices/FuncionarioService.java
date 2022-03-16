@@ -43,7 +43,9 @@ public class FuncionarioService {
 
     //UPDATE CLIENT
     public Funcionario update(Funcionario cliente){
-
+        cliente.valorDevido();
+        cliente.calcularInss();
+        cliente.calcularDecimoTerceiro();
         return funcionarioRepository.save(cliente);
     }
 
