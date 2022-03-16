@@ -68,7 +68,7 @@ class Pagamentos extends BaseController
 
     public function salvarApi()
     {
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
         $id = (int) $post['id'];
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);

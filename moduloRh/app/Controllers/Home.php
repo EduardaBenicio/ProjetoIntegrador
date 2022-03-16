@@ -37,7 +37,7 @@ class Home extends BaseController
     }
     public function logar(){
 
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
         $post['password'] = sha1($post['password']);
        
 
@@ -61,7 +61,7 @@ class Home extends BaseController
         $funcioarios = json_decode(curl_exec($ch), true);
       
        
-        if($funcioarios != ""){
+        if(isset($funcioarios["name"])){
             $_SESSION["user"]["name"] = $funcioarios["name"];
             $_SESSION['user']['id'] = $funcioarios["id"];
             return redirect()->to(site_url("home/principal"));

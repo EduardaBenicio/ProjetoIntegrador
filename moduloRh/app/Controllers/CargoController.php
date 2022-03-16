@@ -97,7 +97,7 @@ class CargoController extends BaseController
     public function salvar(){
 
        
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
        
         $idSetor = (int) $post["sector"];
         
@@ -201,7 +201,7 @@ class CargoController extends BaseController
     public function saveEditCargo(){
 
        
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
        
         $idSetor = (int) $post["sector"];
         

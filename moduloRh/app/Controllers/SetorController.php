@@ -88,7 +88,7 @@ class SetorController extends BaseController
         
         
         // Use POST request
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
         $postJson = json_encode($post);
         #a gente realmente tem que converter para json, mas isso é só porque no cabeçalho de requisição está: application/json
         #normalmente é application/x-www-form-urlencoded aí a gente só passa eles como se estivesse passando via get
@@ -153,7 +153,7 @@ class SetorController extends BaseController
         
         
         // Use POST request
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
         $postJson = json_encode($post);
         #a gente realmente tem que converter para json, mas isso é só porque no cabeçalho de requisição está: application/json
         #normalmente é application/x-www-form-urlencoded aí a gente só passa eles como se estivesse passando via get
