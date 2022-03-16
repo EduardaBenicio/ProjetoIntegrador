@@ -99,7 +99,7 @@ class Funcionarios extends BaseController
 
     public function salvarApi()
     {
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
        
         if ($post['id'] == "") {
             
@@ -128,6 +128,10 @@ class Funcionarios extends BaseController
             $post['usuario']['username'] = $post['user'];
             $post['usuario']['password'] = $post['password'];
             $post['usuario']['authorities'] = $post['authorities'];
+            $post['dataUltimoPag'] = 0;
+            $post['valorDevidoAtual'] = 0;
+            $post['decimoTerceiro'] = 0;
+            $post['inss'] = 0;
 
             unset($post['user']);
             unset($post['password']);
@@ -186,6 +190,7 @@ class Funcionarios extends BaseController
             //Json para Array 
             $view['funcionario'] = $resultado;
             $view['alert'] = 2;
+            $view['dias'] = strtotime($post['dataIngresso']) - strtotime(date('d/m/Y'));
 
             return view('dashboard-employee', $view);
         } else {
@@ -210,7 +215,7 @@ class Funcionarios extends BaseController
             $post['dataUltimoPag'] = $funcionario['dataUltimoPag'];
             $post['dataIngresso'] = $funcionario['dataIngresso'];
             $post['valorDevidoAtual'] = $funcionario['valorDevidoAtual'];
-            $post['dataIngressoCargo'] = "02/02/2022";
+            $post['dataIngressoCargo'] = $funcionario["dataIngressoCargo"];
             $post['dataNasc'] = date('d/m/Y', strtotime($post['dataNasc']));
             $post['password'] = sha1($post['password']);
             $post['usuario']['id'] = $post['id_user'];
@@ -275,7 +280,7 @@ class Funcionarios extends BaseController
 
             //Json para Array 
             $view['funcionario'] = $resultado;
-
+            $view['dias'] = strtotime($funcionario['dataUltimoPag']) - strtotime(date('d/m/Y'));
             
            
 
@@ -312,8 +317,8 @@ class Funcionarios extends BaseController
             $dataCar = strtotime("$dataCargo[2]-$dataCargo[1]-$dataCargo[0]");
             $diasIngressadoNoCargo = ($dataAtu - $dataCar)/86400;
 
-            $res['diasIngressado'] = $diasIngressado;
-            $res['diasIngressadoNoCargo'] = $diasIngressadoNoCargo;
+            $res['diasIngressado'] =  $diasIngressado;
+            $res['diasIngressadoNoCargo'] =  $diasIngressadoNoCargo;
         }
         
         $res['dias'] = strtotime($funcionario['dataUltimoPag']) - strtotime(date('d/m/Y'));
@@ -441,7 +446,7 @@ class Funcionarios extends BaseController
 
     public function salvarPromocao(){
        
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
@@ -454,6 +459,15 @@ class Funcionarios extends BaseController
 
         //Json para Array 
         $view['funcionario'] = json_decode(curl_exec($ch), true);
+        
+        if($view['funcionario']["usuario"]['authorities'][0]['authority'] = "ROLE_ADMIN"){
+            
+            $view['funcionario']["usuario"]['authorities'] = "ROLE_ADMIN,ROLE_USER";
+        }else{
+            $view['funcionario']["usuario"]['authorities'] = "ROLE_USER";
+        }
+
+
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
@@ -470,6 +484,8 @@ class Funcionarios extends BaseController
         $data['cargoAntigo'] = $view['funcionario']['cargo'];
         $data['cargoNovo'] = $view['cargoNovo'];
         $data['dataDaMudanca'] = date('d/m/Y');
+
+
 
      
         $cookies = $this->getToken();
@@ -517,9 +533,29 @@ class Funcionarios extends BaseController
         curl_setopt($ch,CURLOPT_HTTPHEADER,$headers);
         //Json para Array 
         $resultado = json_decode(curl_exec($ch), true);
+
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+        curl_setopt($ch, CURLOPT_USERPWD, "eduarda" . ":" . "teste");
+        curl_setopt($ch, CURLOPT_URL, "http://service-api-rh.herokuapp.com/api/cliente/{$post['id_user']}");
+
+        // Receive server response ...
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+         //Json para Array 
+         $resultado = json_decode(curl_exec($ch), true);
+         
+         if($resultado["usuario"]['authorities'][0]['authority'] = "ROLE_ADMIN"){
+            
+            $resultado["usuario"]['authorities'] = "ROLE_ADMIN,ROLE_USER";
+        }else{
+            $resultado["usuario"]['authorities'] = "ROLE_USER";
+        }
+
        
 
-        return redirect()->to(site_url("Funcionarios/promocao/{$resultado['funcionario']['id']}"));
+        return redirect()->to(site_url("Funcionarios/promocao/{$resultado['id']}"));
            
        // echo "<pre>";
         // print_r($resultado['funcionario']['id']);

@@ -108,7 +108,7 @@ class FeriasController extends BaseController
         return view('register-ferias', $res);
     }
     public function salvarFerias(){
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
         $post['inicio_das_ferias'] = date('d/m/Y', strtotime($post['inicio_das_ferias']));
         $post['fim_das_ferias'] = date('d/m/Y', strtotime($post['fim_das_ferias']));
         
@@ -203,7 +203,7 @@ class FeriasController extends BaseController
 
 
     public function salvarEditFerias($id = null){
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
         $post['inicio_das_ferias'] = date('d/m/Y', strtotime($post['inicio_das_ferias']));
         $post['fim_das_ferias'] = date('d/m/Y', strtotime($post['fim_das_ferias']));
         

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var BASE = "http://localhost/moduloRh/public/index.php/"
+    var BASE = "https://pirh.herokuapp.com/public/index.php/"
 
     $(".setor").on("change", function(){
         var controller = $(this).attr('id');

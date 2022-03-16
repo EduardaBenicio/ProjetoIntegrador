@@ -152,13 +152,13 @@
                                 <?php if (isset($diasIngressado)) : ?>
                                     <div class="col-xl-9 col-md-6">
                                         <h8><b>Total de dias na empresa:</b></h8>
-                                        <h10> <?= $diasIngressado ?> dias</h10>
+                                        <h10> <?= (int) $diasIngressado ?> dias</h10>
                                     </div>
                                 <?php endif; ?>
                                 <?php if (isset($diasIngressadoNoCargo)) : ?>
                                     <div class="col-xl-9 col-md-6">
                                         <h8><b>Total de dias no Cargo:</b></h8>
-                                        <h10> <?= $diasIngressadoNoCargo ?> dias</h10>
+                                        <h10> <?= (int) $diasIngressadoNoCargo ?> dias</h10>
                                     </div>
                                 <?php endif; ?>
 

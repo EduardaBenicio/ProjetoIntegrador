@@ -83,7 +83,7 @@ class AjustesSalariais extends BaseController
 
     public function salvarApi()
     {
-        $post = $this->request->getPost(null, FILTER_SANITIZE_STRING);
+        $post = $this->request->getPost(null);
         
        
         $idCargo = (int) $post["cargo"];
