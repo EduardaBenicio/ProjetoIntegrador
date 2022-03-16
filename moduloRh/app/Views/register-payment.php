@@ -127,6 +127,14 @@
                                 <button id="registrar" class="btn btn-success" type="Submit">Registrar</button>
                                 <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                             </div>
+
+
+                        </div>
+                    </form>
+                    <form action="<?= site_url("pagamentos/salvarDecimoApi") ?>" method="post">
+                        <div class="col-md-8">
+                            <input type="hidden" id="id" name="id" value="<?= $funcionario['id'] ?>" />
+                            <button id="registrarDecimo" class="btn btn-success" type="Submit">Registrar pagamento 13°</button>
                         </div>
                     </form>
                 </div>

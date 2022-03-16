@@ -1,0 +1,7 @@
+CRITICAL - 2022-03-15 21:15:49 --> syntax error, unexpected 'unset' (T_UNSET)
+#0 C:\xampp\htdocs\moduloRh\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('funcionarios/in...')
+#1 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('funcionarios/in...')
+#2 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\moduloRh\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\moduloRh\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

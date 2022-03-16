@@ -26,7 +26,6 @@
                         </div>
                     <?php endif; ?>
                     <div class="row">
-                        <?php if ($dias > 7) : ?>
                             <div class="col-xl-3 col-md-6">
 
                                 <div class="card bg-primary text-white mb-4">
@@ -35,7 +34,6 @@
                                 </div>
 
                             </div>
-                        <?php endif; ?>
                         <?php if (isset($diasIngressado)) : ?>
                             <?php if ($diasIngressado >= 365) : ?>
                                 <div class="col-xl-2 col-md-6">
@@ -50,6 +48,7 @@
                                 <a id="registrarPromocao" name="registrarPromocao" class="btn btn-primary" href="<?= site_url("funcionarios/promocao/{$funcionario['id']}") ?>" role="button">Registrar promoção</a>
                             </div>
                         </div>
+                       
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-primary text-white mb-4">
                                 <a id="editar" name="editar" class="btn btn-primary" href="<?= site_url("Funcionarios/registerEmployee/{$funcionario['id']}") ?>" role="button">Editar informações</a>

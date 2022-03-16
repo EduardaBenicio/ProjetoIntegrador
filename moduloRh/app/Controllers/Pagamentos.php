@@ -184,4 +184,72 @@ class Pagamentos extends BaseController
 
         return redirect()->to(site_url("pagamentos/index"));
     }
+
+    public function salvarDecimoApi(){
+        $post = $this->request->getPost(null);
+
+        $id = (int) $post['id'];
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+        curl_setopt($ch, CURLOPT_USERPWD, "eduarda" . ":" . "teste");
+        curl_setopt($ch, CURLOPT_URL, "http://service-api-rh.herokuapp.com/api/cliente/{$id}");
+
+        // Receive server response ...
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        //Json para Array 
+        $funcionario = json_decode(curl_exec($ch), true);
+        if($funcionario["usuario"]['authorities'][0]['authority'] = "ROLE_ADMIN"){
+            
+            $funcionario["usuario"]['authorities'] = "ROLE_ADMIN,ROLE_USER";
+        }else{
+            $funcionario["usuario"]['authorities'] = "ROLE_USER";
+        }
+
+        unset($post['id']);
+        $post['date_payment'] = date('d/m/Y');
+        $post['funcionario'] = $funcionario;
+        $cookies = $this->getToken();
+        $token = $cookies["XSRF-TOKEN"];
+        $jsession = $cookies["JSESSIONID"];
+       
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+        curl_setopt($ch, CURLOPT_USERPWD, "eduarda" . ":" . "teste");
+        curl_setopt($ch, CURLOPT_URL, "http://service-api-rh.herokuapp.com/api/paymentDecimo/savePaymentDecimo");
+        
+        // Receive server response ...
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);        
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+        
+        // Use POST request
+        $postJson = json_encode($post);
+
+      
+        #a gente realmente tem que converter para json, mas isso é só porque no cabeçalho de requisição está: application/json
+        #normalmente é application/x-www-form-urlencoded aí a gente só passa eles como se estivesse passando via get
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postJson);
+        
+        $headers = array(
+            "Cookie: XSRF-TOKEN=$token; JSESSIONID=$jsession", 
+            "X-XSRF-TOKEN: $token",                          
+            'Content-Type: application/json',
+           
+        );
+        
+        // Set HTTP Header for POST request 
+        curl_setopt($ch,CURLOPT_HTTPHEADER,$headers);
+        //Json para Array 
+        $resultado = json_decode(curl_exec($ch), true);
+
+        //Json para Array 
+        $view['funcionario'] = $funcionario;
+        $view['alertPayment'] = 1;
+
+
+        return view('dashboard-employee', $view);
+    }
 }
